@@ -19,6 +19,10 @@ export function PhotoCapture({
   const videoRef = useRef<HTMLVideoElement>(null)
   const streamRef = useRef<MediaStream | null>(null)
   const listenTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const recognitionRef = useRef<any>(null)
+  // Note text captured before the current dictation started, so live interim
+  // results append to it instead of overwriting what the user already typed.
+  const baseNoteRef = useRef('')
 
   useEffect(() => {
     let active = true
@@ -48,6 +52,9 @@ export function PhotoCapture({
     return () => {
       active = false
       listenTimer.current && clearTimeout(listenTimer.current)
+      try {
+        recognitionRef.current?.stop()
+      } catch {}
       streamRef.current?.getTracks().forEach((t) => t.stop())
     }
   }, [])
@@ -71,15 +78,67 @@ export function PhotoCapture({
     return ''
   }
 
-  function toggleMic() {
-    if (listening) return
-    // Demo mode: simulate speech-to-text by filling the note with a scripted
-    // phrase. On a real device this is where live transcription would land.
+  function startScriptedFallback() {
+    // Used only when the browser has no Web Speech API (e.g. the headless
+    // preview or unsupported browsers) so the demo still works.
     setListening(true)
     listenTimer.current = setTimeout(() => {
       setNote((n) => (n.trim() ? `${n.trim()} ${SCRIPTED_PHOTO_NOTE}` : SCRIPTED_PHOTO_NOTE))
       setListening(false)
     }, 1600)
+  }
+
+  function toggleMic() {
+    // Stop if already listening.
+    if (listening) {
+      try {
+        recognitionRef.current?.stop()
+      } catch {}
+      listenTimer.current && clearTimeout(listenTimer.current)
+      setListening(false)
+      return
+    }
+
+    const SpeechRecognition =
+      typeof window !== 'undefined' &&
+      ((window as any).SpeechRecognition || (window as any).webkitSpeechRecognition)
+
+    // No live speech support: fall back to the scripted note.
+    if (!SpeechRecognition) {
+      startScriptedFallback()
+      return
+    }
+
+    const recognition = new SpeechRecognition()
+    recognition.lang = 'en-US'
+    recognition.continuous = true
+    recognition.interimResults = true
+
+    baseNoteRef.current = note.trim()
+
+    recognition.onresult = (event: any) => {
+      let transcript = ''
+      for (let i = 0; i < event.results.length; i++) {
+        transcript += event.results[i][0].transcript
+      }
+      const base = baseNoteRef.current
+      const combined = base ? `${base} ${transcript}` : transcript
+      setNote(combined.replace(/\s+/g, ' ').trimStart())
+    }
+    recognition.onerror = () => {
+      setListening(false)
+    }
+    recognition.onend = () => {
+      setListening(false)
+    }
+
+    recognitionRef.current = recognition
+    try {
+      recognition.start()
+      setListening(true)
+    } catch {
+      startScriptedFallback()
+    }
   }
 
   function handleSend() {
