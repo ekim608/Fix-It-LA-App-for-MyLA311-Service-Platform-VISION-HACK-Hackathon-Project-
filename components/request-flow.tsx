@@ -1,77 +1,48 @@
 'use client'
 
 import { useState } from 'react'
-import { ArrowLeft, MapPin } from 'lucide-react'
-import { HomeScreen } from '@/components/home-screen'
-import { VoiceCapture } from '@/components/voice-capture'
-import { TextCapture } from '@/components/text-capture'
+import { ArrowLeft } from 'lucide-react'
 import { PhotoCapture } from '@/components/photo-capture'
 import { ReviewForm } from '@/components/review-form'
 import { ConfirmationScreen } from '@/components/confirmation-screen'
 import { getService } from '@/lib/services'
-import { classifyDemo, classifyDemoPhoto } from '@/lib/classify-demo'
+import { classifyDemoPhoto } from '@/lib/classify-demo'
 import { emptyDraft } from '@/lib/types'
-import type { CaptureSource, DraftRequest, SubmitResult } from '@/lib/types'
+import type { DraftRequest, SubmitResult } from '@/lib/types'
 
-type Step =
-  | 'home'
-  | 'voice'
-  | 'text'
-  | 'photo'
-  | 'classifying'
-  | 'review'
-  | 'done'
+type Step = 'photo' | 'classifying' | 'review' | 'done'
 
 export function RequestFlow() {
-  const [step, setStep] = useState<Step>('home')
-  const [draft, setDraft] = useState<DraftRequest>(emptyDraft('browse'))
+  const [step, setStep] = useState<Step>('photo')
+  const [draft, setDraft] = useState<DraftRequest>(emptyDraft('photo'))
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [result, setResult] = useState<SubmitResult | null>(null)
 
   function reset() {
-    setDraft(emptyDraft('browse'))
+    setDraft(emptyDraft('photo'))
     setError(null)
     setResult(null)
-    setStep('home')
+    setStep('photo')
   }
 
   function patchDraft(patch: Partial<DraftRequest>) {
     setDraft((d) => ({ ...d, ...patch }))
   }
 
-  function pickService(code: string) {
-    const service = getService(code)
-    setDraft({
-      ...emptyDraft('browse'),
-      serviceCode: code,
-      title: service?.name ?? '',
-    })
-    setStep('review')
-  }
-
-  async function classify(input: {
-    source: CaptureSource
-    text?: string
-    imageDataUrl?: string
-  }) {
+  async function classify(input: { imageDataUrl?: string; note?: string }) {
     setStep('classifying')
     setError(null)
     const base: DraftRequest = {
-      ...emptyDraft(input.source),
-      description: input.text ?? '',
-      transcript: input.source === 'voice' ? input.text : undefined,
+      ...emptyDraft('photo'),
+      description: input.note ?? '',
       photoDataUrl: input.imageDataUrl,
     }
 
-    // Demo mode: everything is classified locally so the flow needs no backend.
-    // A photo is scripted to a pothole with the location resolved from GPS;
-    // voice and typed reports are matched against the service keyword catalog.
-    // The review form then opens pre-filled with the detected service.
-    const c =
-      input.source === 'photo'
-        ? classifyDemoPhoto(input.text)
-        : classifyDemo(input.text ?? '')
+    // Demo mode: the photo is classified locally so the flow needs no backend.
+    // It is scripted to a pothole with the location resolved from GPS, and the
+    // review form then opens pre-filled with the detected service.
+    const c = classifyDemoPhoto(input.note)
     await new Promise((r) => setTimeout(r, 1100))
     const service = getService(c.serviceCode)
     setDraft({
@@ -114,25 +85,21 @@ export function RequestFlow() {
     }
   }
 
-  const showBack = step !== 'home' && step !== 'done'
+  const showBack = step === 'review' || step === 'classifying'
 
   return (
     <div className="mx-auto flex min-h-dvh w-full max-w-md flex-col">
       <header className="flex items-center gap-3 px-4 pb-2 pt-5">
-        {showBack ? (
-          <button
-            type="button"
-            onClick={reset}
-            aria-label="Back to start"
-            className="flex size-10 items-center justify-center rounded-full text-foreground hover:bg-muted focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring/50"
-          >
-            <ArrowLeft className="size-5" aria-hidden="true" />
-          </button>
-        ) : (
-          <span className="flex size-10 items-center justify-center rounded-xl bg-primary text-primary-foreground">
-            <MapPin className="size-5" aria-hidden="true" />
-          </span>
-        )}
+        <button
+          type="button"
+          onClick={reset}
+          aria-label="Back to camera"
+          className={`flex size-10 items-center justify-center rounded-full text-foreground hover:bg-muted focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring/50 ${
+            showBack ? '' : 'invisible'
+          }`}
+        >
+          <ArrowLeft className="size-5" aria-hidden="true" />
+        </button>
         <span className="text-lg font-extrabold tracking-tight">CityPin</span>
         <span className="ml-auto rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-secondary-foreground">
           LA 311
@@ -140,38 +107,10 @@ export function RequestFlow() {
       </header>
 
       <main className="flex-1 px-4 pb-10 pt-2">
-        {step === 'home' && (
-          <HomeScreen
-            onVoice={() => {
-              setDraft(emptyDraft('voice'))
-              setStep('voice')
-            }}
-            onText={() => {
-              setDraft(emptyDraft('text'))
-              setStep('text')
-            }}
-            onPhoto={() => {
-              setDraft(emptyDraft('photo'))
-              setStep('photo')
-            }}
-            onPickService={pickService}
-          />
-        )}
-
-        {step === 'voice' && (
-          <VoiceCapture
-            onTranscript={(text) => classify({ source: 'voice', text })}
-          />
-        )}
-
-        {step === 'text' && (
-          <TextCapture onText={(text) => classify({ source: 'text', text })} />
-        )}
-
         {step === 'photo' && (
           <PhotoCapture
             onSubmit={(dataUrl, note) =>
-              classify({ source: 'photo', imageDataUrl: dataUrl, text: note })
+              classify({ imageDataUrl: dataUrl, note })
             }
           />
         )}
