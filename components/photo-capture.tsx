@@ -19,6 +19,10 @@ export function PhotoCapture({
   const videoRef = useRef<HTMLVideoElement>(null)
   const streamRef = useRef<MediaStream | null>(null)
   const listenTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const recognitionRef = useRef<any>(null)
+  // Note text captured before the current dictation started, so live interim
+  // results append to it instead of overwriting what the user already typed.
+  const baseNoteRef = useRef('')
 
   useEffect(() => {
     let active = true
@@ -48,6 +52,9 @@ export function PhotoCapture({
     return () => {
       active = false
       listenTimer.current && clearTimeout(listenTimer.current)
+      try {
+        recognitionRef.current?.stop()
+      } catch {}
       streamRef.current?.getTracks().forEach((t) => t.stop())
     }
   }, [])
@@ -71,15 +78,67 @@ export function PhotoCapture({
     return ''
   }
 
-  function toggleMic() {
-    if (listening) return
-    // Demo mode: simulate speech-to-text by filling the note with a scripted
-    // phrase. On a real device this is where live transcription would land.
+  function startScriptedFallback() {
+    // Used only when the browser has no Web Speech API (e.g. the headless
+    // preview or unsupported browsers) so the demo still works.
     setListening(true)
     listenTimer.current = setTimeout(() => {
       setNote((n) => (n.trim() ? `${n.trim()} ${SCRIPTED_PHOTO_NOTE}` : SCRIPTED_PHOTO_NOTE))
       setListening(false)
     }, 1600)
+  }
+
+  function toggleMic() {
+    // Stop if already listening.
+    if (listening) {
+      try {
+        recognitionRef.current?.stop()
+      } catch {}
+      listenTimer.current && clearTimeout(listenTimer.current)
+      setListening(false)
+      return
+    }
+
+    const SpeechRecognition =
+      typeof window !== 'undefined' &&
+      ((window as any).SpeechRecognition || (window as any).webkitSpeechRecognition)
+
+    // No live speech support: fall back to the scripted note.
+    if (!SpeechRecognition) {
+      startScriptedFallback()
+      return
+    }
+
+    const recognition = new SpeechRecognition()
+    recognition.lang = 'en-US'
+    recognition.continuous = true
+    recognition.interimResults = true
+
+    baseNoteRef.current = note.trim()
+
+    recognition.onresult = (event: any) => {
+      let transcript = ''
+      for (let i = 0; i < event.results.length; i++) {
+        transcript += event.results[i][0].transcript
+      }
+      const base = baseNoteRef.current
+      const combined = base ? `${base} ${transcript}` : transcript
+      setNote(combined.replace(/\s+/g, ' ').trimStart())
+    }
+    recognition.onerror = () => {
+      setListening(false)
+    }
+    recognition.onend = () => {
+      setListening(false)
+    }
+
+    recognitionRef.current = recognition
+    try {
+      recognition.start()
+      setListening(true)
+    } catch {
+      startScriptedFallback()
+    }
   }
 
   function handleSend() {
@@ -90,84 +149,88 @@ export function PhotoCapture({
   }
 
   return (
-    <div className="flex flex-col gap-3 pt-1">
-      <p className="px-1 text-center text-sm text-muted-foreground text-pretty">
-        Point at the issue, add a note by typing or speaking, then send.
-      </p>
+    <div className="fixed inset-0 z-10 overflow-hidden bg-neutral-950">
+      {/* Live camera viewfinder */}
+      <video
+        ref={videoRef}
+        playsInline
+        muted
+        aria-label="Camera viewfinder"
+        className={`absolute inset-0 size-full object-cover ${cameraReady ? 'opacity-100' : 'opacity-0'}`}
+      />
 
-      <div className="relative h-[68vh] min-h-[460px] w-full overflow-hidden rounded-3xl bg-neutral-900 shadow-lg">
-        {/* Live camera viewfinder */}
-        <video
-          ref={videoRef}
-          playsInline
-          muted
-          aria-label="Camera viewfinder"
-          className={`size-full object-cover ${cameraReady ? 'opacity-100' : 'opacity-0'}`}
-        />
+      {/* Fallback viewfinder when no camera is available */}
+      {!cameraReady && (
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-gradient-to-b from-neutral-800 to-neutral-950 text-neutral-400">
+          <Camera className="size-16" aria-hidden="true" />
+          <span className="text-sm">Camera preview</span>
+        </div>
+      )}
 
-        {/* Fallback viewfinder when no camera is available */}
-        {!cameraReady && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-gradient-to-b from-neutral-800 to-neutral-950 text-neutral-400">
-            <Camera className="size-16" aria-hidden="true" />
-            <span className="text-sm">Camera preview</span>
-          </div>
-        )}
+      {/* Shutter flash on capture */}
+      {flash && <span className="absolute inset-0 bg-white/80" aria-hidden="true" />}
 
-        {/* Shutter flash on capture */}
-        {flash && <span className="absolute inset-0 bg-white/80" aria-hidden="true" />}
-
-        {/* Corner viewfinder framing */}
-        <div className="pointer-events-none absolute inset-4 rounded-2xl border border-white/25" />
-
-        {/* Detected-location geofilter pill */}
-        <div className="absolute inset-x-0 top-4 flex justify-center px-4">
+      {/* Top overlay: branding + detected-location pill */}
+      <div className="absolute inset-x-0 top-0 flex flex-col gap-3 bg-gradient-to-b from-black/50 to-transparent px-4 pb-6 pt-[max(1.25rem,env(safe-area-inset-top))]">
+        <div className="flex items-center gap-3">
+          <span className="text-lg font-extrabold tracking-tight text-white">CityPin</span>
+          <span className="ml-auto rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-white backdrop-blur">
+            LA 311
+          </span>
+        </div>
+        <div className="flex justify-center">
           <span className="flex items-center gap-1.5 rounded-full bg-black/45 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">
             <MapPin className="size-3.5" aria-hidden="true" />
             Museum of Contemporary Art
           </span>
         </div>
+      </div>
 
-        {/* Bottom text-entry bar with speak option */}
-        <div className="absolute inset-x-0 bottom-0 p-4">
-          {listening && (
-            <p
-              className="mb-2 text-center text-sm font-medium text-white"
-              aria-live="polite"
-            >
-              <span className="mr-2 inline-block size-2 animate-pulse rounded-full bg-red-500 align-middle" />
-              Listening…
-            </p>
-          )}
-          <div className="flex items-center gap-2 rounded-full bg-black/50 p-1.5 pl-2 backdrop-blur">
-            <button
-              type="button"
-              onClick={toggleMic}
-              aria-label="Speak your note"
-              aria-pressed={listening}
-              className={`flex size-11 shrink-0 items-center justify-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/40 ${
-                listening
-                  ? 'bg-red-500 text-white'
-                  : 'bg-white/15 text-white hover:bg-white/25'
-              }`}
-            >
-              <Mic className="size-5" aria-hidden="true" />
-            </button>
-            <input
-              value={note}
-              onChange={(e) => setNote(e.target.value)}
-              placeholder="Add a note…"
-              aria-label="Add a note about the issue"
-              className="min-w-0 flex-1 bg-transparent px-1 text-base text-white placeholder:text-white/60 focus:outline-none"
-            />
-            <button
-              type="button"
-              onClick={handleSend}
-              aria-label="Send report"
-              className="flex size-11 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground transition-transform active:translate-y-px focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring/50"
-            >
-              <Send className="size-5" aria-hidden="true" />
-            </button>
-          </div>
+      {/* Helper hint */}
+      <p className="pointer-events-none absolute inset-x-0 top-28 px-8 text-center text-sm text-white/70 text-pretty">
+        Point at the issue, add a note by typing or speaking, then send.
+      </p>
+
+      {/* Bottom text-entry bar with speak option */}
+      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-8">
+        {listening && (
+          <p
+            className="mb-2 text-center text-sm font-medium text-white"
+            aria-live="polite"
+          >
+            <span className="mr-2 inline-block size-2 animate-pulse rounded-full bg-red-500 align-middle" />
+            Listening…
+          </p>
+        )}
+        <div className="mx-auto flex w-full max-w-md items-center gap-2 rounded-full bg-black/50 p-1.5 pl-2 backdrop-blur">
+          <button
+            type="button"
+            onClick={toggleMic}
+            aria-label="Speak your note"
+            aria-pressed={listening}
+            className={`flex size-11 shrink-0 items-center justify-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/40 ${
+              listening
+                ? 'bg-red-500 text-white'
+                : 'bg-white/15 text-white hover:bg-white/25'
+            }`}
+          >
+            <Mic className="size-5" aria-hidden="true" />
+          </button>
+          <input
+            value={note}
+            onChange={(e) => setNote(e.target.value)}
+            placeholder="Add a note…"
+            aria-label="Add a note about the issue"
+            className="min-w-0 flex-1 bg-transparent px-1 text-base text-white placeholder:text-white/60 focus:outline-none"
+          />
+          <button
+            type="button"
+            onClick={handleSend}
+            aria-label="Send report"
+            className="flex size-11 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground transition-transform active:translate-y-px focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring/50"
+          >
+            <Send className="size-5" aria-hidden="true" />
+          </button>
         </div>
       </div>
     </div>
