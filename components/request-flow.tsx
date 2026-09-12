@@ -85,7 +85,15 @@ export function RequestFlow() {
     }
   }
 
-  const showBack = step === 'review' || step === 'classifying'
+  // The camera is a full-screen surface with its own overlay branding, so it
+  // renders outside the centered app shell used by the other steps.
+  if (step === 'photo') {
+    return (
+      <PhotoCapture
+        onSubmit={(dataUrl, note) => classify({ imageDataUrl: dataUrl, note })}
+      />
+    )
+  }
 
   return (
     <div className="mx-auto flex min-h-dvh w-full max-w-md flex-col">
@@ -94,9 +102,7 @@ export function RequestFlow() {
           type="button"
           onClick={reset}
           aria-label="Back to camera"
-          className={`flex size-10 items-center justify-center rounded-full text-foreground hover:bg-muted focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring/50 ${
-            showBack ? '' : 'invisible'
-          }`}
+          className="flex size-10 items-center justify-center rounded-full text-foreground hover:bg-muted focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring/50"
         >
           <ArrowLeft className="size-5" aria-hidden="true" />
         </button>
@@ -107,14 +113,6 @@ export function RequestFlow() {
       </header>
 
       <main className="flex-1 px-4 pb-10 pt-2">
-        {step === 'photo' && (
-          <PhotoCapture
-            onSubmit={(dataUrl, note) =>
-              classify({ imageDataUrl: dataUrl, note })
-            }
-          />
-        )}
-
         {step === 'classifying' && (
           <div className="flex flex-col items-center gap-6 pt-24 text-center">
             <span className="size-14 animate-spin rounded-full border-4 border-muted border-t-primary" />
