@@ -8,6 +8,7 @@ import { PhotoCapture } from '@/components/photo-capture'
 import { ReviewForm } from '@/components/review-form'
 import { ConfirmationScreen } from '@/components/confirmation-screen'
 import { getService } from '@/lib/services'
+import { classifyDemo } from '@/lib/classify-demo'
 import { emptyDraft } from '@/lib/types'
 import type {
   CaptureSource,
@@ -59,6 +60,26 @@ export function RequestFlow() {
       transcript: input.source === 'voice' ? input.text : undefined,
       photoDataUrl: input.imageDataUrl,
     }
+
+    // Demo mode: classify voice/typed reports locally so the flow needs no
+    // backend. The review form opens pre-filled with the detected service.
+    if (input.source === 'voice') {
+      const c = classifyDemo(input.text ?? '')
+      await new Promise((r) => setTimeout(r, 1100))
+      const service = getService(c.serviceCode)
+      setDraft({
+        ...base,
+        serviceCode: c.serviceCode,
+        title: c.title || service?.name || '',
+        description: c.description || base.description,
+        confidence: c.confidence,
+        address: c.extractedLocation || '',
+        attributes: c.attributes,
+      })
+      setStep('review')
+      return
+    }
+
     try {
       const res = await fetch('/api/classify', {
         method: 'POST',
