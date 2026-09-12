@@ -15,6 +15,7 @@ export function PhotoCapture({
   const [note, setNote] = useState('')
   const [listening, setListening] = useState(false)
   const [flash, setFlash] = useState(false)
+  const [locationLabel, setLocationLabel] = useState('Locating…')
 
   const videoRef = useRef<HTMLVideoElement>(null)
   const streamRef = useRef<MediaStream | null>(null)
@@ -56,6 +57,43 @@ export function PhotoCapture({
         recognitionRef.current?.stop()
       } catch {}
       streamRef.current?.getTracks().forEach((t) => t.stop())
+    }
+  }, [])
+
+  // Resolve the device's real location for the top pill, reverse-geocoded to a
+  // readable place/street. Falls back to a demo label if it's unavailable.
+  useEffect(() => {
+    if (typeof navigator === 'undefined' || !navigator.geolocation) {
+      setLocationLabel('Museum of Contemporary Art')
+      return
+    }
+    let active = true
+    navigator.geolocation.getCurrentPosition(
+      async (pos) => {
+        const { latitude, longitude } = pos.coords
+        try {
+          const res = await fetch(`/api/geocode?lat=${latitude}&lon=${longitude}`)
+          const data = (await res.json()) as { address?: string | null }
+          if (!active) return
+          if (data.address) {
+            // Nominatim returns a long comma-joined string; keep the first
+            // few, most specific parts for a compact pill.
+            const short = data.address.split(',').slice(0, 3).join(',').trim()
+            setLocationLabel(short)
+          } else {
+            setLocationLabel(`${latitude.toFixed(5)}, ${longitude.toFixed(5)}`)
+          }
+        } catch {
+          if (active) setLocationLabel(`${latitude.toFixed(5)}, ${longitude.toFixed(5)}`)
+        }
+      },
+      () => {
+        if (active) setLocationLabel('Museum of Contemporary Art')
+      },
+      { enableHighAccuracy: true, timeout: 8000, maximumAge: 60000 },
+    )
+    return () => {
+      active = false
     }
   }, [])
 
@@ -192,9 +230,9 @@ export function PhotoCapture({
           </span>
         </div>
         <div className="flex justify-center">
-          <span className="flex items-center gap-1.5 rounded-full bg-black/45 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">
-            <MapPin className="size-3.5" aria-hidden="true" />
-            Museum of Contemporary Art
+          <span className="flex max-w-[80%] items-center gap-1.5 rounded-full bg-black/45 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">
+            <MapPin className="size-3.5 shrink-0" aria-hidden="true" />
+            <span className="truncate">{locationLabel}</span>
           </span>
         </div>
       </div>
