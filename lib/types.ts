@@ -1,4 +1,4 @@
-export type CaptureSource = 'voice' | 'photo' | 'browse'
+export type CaptureSource = 'voice' | 'text' | 'photo' | 'browse'
 
 export type DraftRequest = {
   source: CaptureSource

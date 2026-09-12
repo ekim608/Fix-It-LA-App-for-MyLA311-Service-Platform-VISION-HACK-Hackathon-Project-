@@ -4,20 +4,23 @@ import { useState } from 'react'
 import { ArrowLeft, MapPin } from 'lucide-react'
 import { HomeScreen } from '@/components/home-screen'
 import { VoiceCapture } from '@/components/voice-capture'
+import { TextCapture } from '@/components/text-capture'
 import { PhotoCapture } from '@/components/photo-capture'
 import { ReviewForm } from '@/components/review-form'
 import { ConfirmationScreen } from '@/components/confirmation-screen'
 import { getService } from '@/lib/services'
-import { classifyDemo } from '@/lib/classify-demo'
+import { classifyDemo, classifyDemoPhoto } from '@/lib/classify-demo'
 import { emptyDraft } from '@/lib/types'
-import type {
-  CaptureSource,
-  Classification,
-  DraftRequest,
-  SubmitResult,
-} from '@/lib/types'
+import type { CaptureSource, DraftRequest, SubmitResult } from '@/lib/types'
 
-type Step = 'home' | 'voice' | 'photo' | 'classifying' | 'review' | 'done'
+type Step =
+  | 'home'
+  | 'voice'
+  | 'text'
+  | 'photo'
+  | 'classifying'
+  | 'review'
+  | 'done'
 
 export function RequestFlow() {
   const [step, setStep] = useState<Step>('home')
@@ -61,58 +64,26 @@ export function RequestFlow() {
       photoDataUrl: input.imageDataUrl,
     }
 
-    // Demo mode: classify voice/typed reports locally so the flow needs no
-    // backend. The review form opens pre-filled with the detected service.
-    if (input.source === 'voice') {
-      const c = classifyDemo(input.text ?? '')
-      await new Promise((r) => setTimeout(r, 1100))
-      const service = getService(c.serviceCode)
-      setDraft({
-        ...base,
-        serviceCode: c.serviceCode,
-        title: c.title || service?.name || '',
-        description: c.description || base.description,
-        confidence: c.confidence,
-        address: c.extractedLocation || '',
-        attributes: c.attributes,
-      })
-      setStep('review')
-      return
-    }
-
-    try {
-      const res = await fetch('/api/classify', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          text: input.text,
-          imageDataUrl: input.imageDataUrl,
-        }),
-      })
-      const data = (await res.json()) as Partial<Classification> & { error?: string }
-      if (!res.ok || !data.serviceCode) {
-        throw new Error(data.error || 'Could not classify the report.')
-      }
-      const service = getService(data.serviceCode)
-      setDraft({
-        ...base,
-        serviceCode: data.serviceCode,
-        title: data.title || service?.name || '',
-        description: data.description || base.description,
-        confidence: data.confidence ?? null,
-        address: data.extractedLocation || '',
-      })
-      setStep('review')
-    } catch (err) {
-      // Fall back to manual review so the user is never stuck.
-      setDraft({ ...base, serviceCode: 'OTHER', confidence: 0 })
-      setError(
-        err instanceof Error
-          ? `${err.message} You can still pick the service yourself below.`
-          : 'Something went wrong. Please choose the service below.',
-      )
-      setStep('review')
-    }
+    // Demo mode: everything is classified locally so the flow needs no backend.
+    // A photo is scripted to a pothole with the location resolved from GPS;
+    // voice and typed reports are matched against the service keyword catalog.
+    // The review form then opens pre-filled with the detected service.
+    const c =
+      input.source === 'photo' ? classifyDemoPhoto() : classifyDemo(input.text ?? '')
+    await new Promise((r) => setTimeout(r, 1100))
+    const service = getService(c.serviceCode)
+    setDraft({
+      ...base,
+      serviceCode: c.serviceCode,
+      title: c.title || service?.name || '',
+      description: c.description || base.description,
+      confidence: c.confidence,
+      address: c.extractedLocation || '',
+      lat: c.lat,
+      lng: c.lng,
+      attributes: c.attributes,
+    })
+    setStep('review')
   }
 
   async function submit() {
@@ -173,6 +144,10 @@ export function RequestFlow() {
               setDraft(emptyDraft('voice'))
               setStep('voice')
             }}
+            onText={() => {
+              setDraft(emptyDraft('text'))
+              setStep('text')
+            }}
             onPhoto={() => {
               setDraft(emptyDraft('photo'))
               setStep('photo')
@@ -185,6 +160,10 @@ export function RequestFlow() {
           <VoiceCapture
             onTranscript={(text) => classify({ source: 'voice', text })}
           />
+        )}
+
+        {step === 'text' && (
+          <TextCapture onText={(text) => classify({ source: 'text', text })} />
         )}
 
         {step === 'photo' && (

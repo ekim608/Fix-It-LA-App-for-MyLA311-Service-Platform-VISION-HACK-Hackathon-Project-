@@ -1,15 +1,17 @@
 'use client'
 
-import { Mic, Camera, ChevronRight } from 'lucide-react'
+import { Mic, Camera, PenLine, ChevronRight } from 'lucide-react'
 import { ServiceIcon } from '@/components/service-icon'
 import { SERVICES } from '@/lib/services'
 
 export function HomeScreen({
   onVoice,
+  onText,
   onPhoto,
   onPickService,
 }: {
   onVoice: () => void
+  onText: () => void
   onPhoto: () => void
   onPickService: (code: string) => void
 }) {
@@ -20,8 +22,8 @@ export function HomeScreen({
           Report a city issue in seconds
         </h1>
         <p className="text-pretty text-base leading-relaxed text-muted-foreground">
-          Speak or snap a photo. CityPin finds the right LA 311 request and fills
-          it out for you.
+          Speak, type, or snap a photo. CityPin finds the right LA 311 request
+          and fills it out for you.
         </p>
       </section>
 
@@ -45,24 +47,35 @@ export function HomeScreen({
           </span>
         </button>
 
-        <button
-          type="button"
-          onClick={onPhoto}
-          className="group flex min-h-32 flex-col items-start justify-between rounded-2xl border border-border bg-card p-6 text-left shadow-sm transition-transform active:translate-y-px focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring/50"
-        >
-          <span className="flex size-14 items-center justify-center rounded-xl bg-accent/30 text-accent-foreground">
-            <Camera className="size-7" aria-hidden="true" />
-          </span>
-          <span className="flex w-full items-end justify-between">
-            <span className="flex flex-col">
-              <span className="text-xl font-bold">Take a photo</span>
-              <span className="text-sm text-muted-foreground">
-                Show us what&apos;s wrong
-              </span>
+        <div className="grid grid-cols-2 gap-4">
+          <button
+            type="button"
+            onClick={onText}
+            className="flex min-h-32 flex-col items-start justify-between rounded-2xl border border-border bg-card p-5 text-left shadow-sm transition-transform active:translate-y-px focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring/50"
+          >
+            <span className="flex size-12 items-center justify-center rounded-xl bg-secondary text-primary">
+              <PenLine className="size-6" aria-hidden="true" />
             </span>
-            <ChevronRight className="size-6 text-muted-foreground" aria-hidden="true" />
-          </span>
-        </button>
+            <span className="flex flex-col">
+              <span className="text-lg font-bold">Type it</span>
+              <span className="text-sm text-muted-foreground">Write a short note</span>
+            </span>
+          </button>
+
+          <button
+            type="button"
+            onClick={onPhoto}
+            className="flex min-h-32 flex-col items-start justify-between rounded-2xl border border-border bg-card p-5 text-left shadow-sm transition-transform active:translate-y-px focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring/50"
+          >
+            <span className="flex size-12 items-center justify-center rounded-xl bg-accent/30 text-accent-foreground">
+              <Camera className="size-6" aria-hidden="true" />
+            </span>
+            <span className="flex flex-col">
+              <span className="text-lg font-bold">Take a photo</span>
+              <span className="text-sm text-muted-foreground">Show the issue</span>
+            </span>
+          </button>
+        </div>
       </section>
 
       <section className="flex flex-col gap-3" aria-label="Browse services">
