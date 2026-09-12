@@ -22,18 +22,26 @@ export type DemoClassification = {
 export const SCRIPTED_VOICE_TRANSCRIPT =
   'Illegal dumping of construction debris at the Museum of Contemporary Art'
 
+/** The scripted note used when the user taps the mic on the camera screen. */
+export const SCRIPTED_PHOTO_NOTE =
+  'There is a deep pothole in the right lane near the crosswalk.'
+
 /**
  * Scripted result for the photo demo. The user snaps a picture of a pothole and
  * the app resolves their GPS position to the Museum of Contemporary Art. No
  * backend or real image recognition runs — this keeps the demo deterministic.
+ * An optional note (typed or spoken) becomes the request description.
  */
-export function classifyDemoPhoto(): DemoClassification {
+export function classifyDemoPhoto(note?: string): DemoClassification {
   const service = getService('POTHOLE')!
+  const trimmed = note?.trim()
   return {
     serviceCode: service.code,
     title: service.name,
     description:
-      'Large pothole in the roadway creating a hazard for passing vehicles.',
+      trimmed && trimmed.length > 0
+        ? trimmed
+        : 'Large pothole in the roadway creating a hazard for passing vehicles.',
     confidence: 0.94,
     extractedLocation:
       'Museum of Contemporary Art, 250 S Grand Ave, Los Angeles, CA 90012',

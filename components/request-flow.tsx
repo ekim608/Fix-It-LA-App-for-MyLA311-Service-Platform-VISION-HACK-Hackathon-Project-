@@ -69,7 +69,9 @@ export function RequestFlow() {
     // voice and typed reports are matched against the service keyword catalog.
     // The review form then opens pre-filled with the detected service.
     const c =
-      input.source === 'photo' ? classifyDemoPhoto() : classifyDemo(input.text ?? '')
+      input.source === 'photo'
+        ? classifyDemoPhoto(input.text)
+        : classifyDemo(input.text ?? '')
     await new Promise((r) => setTimeout(r, 1100))
     const service = getService(c.serviceCode)
     setDraft({
@@ -168,7 +170,9 @@ export function RequestFlow() {
 
         {step === 'photo' && (
           <PhotoCapture
-            onPhoto={(dataUrl) => classify({ source: 'photo', imageDataUrl: dataUrl })}
+            onSubmit={(dataUrl, note) =>
+              classify({ source: 'photo', imageDataUrl: dataUrl, text: note })
+            }
           />
         )}
 
