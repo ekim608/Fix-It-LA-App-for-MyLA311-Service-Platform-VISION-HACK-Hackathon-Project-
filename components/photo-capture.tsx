@@ -128,8 +128,8 @@ export function PhotoCapture({
       </div>
 
       {/* Helper hint */}
-      <p className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 px-8 text-center text-sm text-white/70 text-pretty">
-        {cameraReady ? '' : 'Point at the issue, add a note by typing or speaking, then send.'}
+      <p className="pointer-events-none absolute inset-x-0 top-28 px-8 text-center text-sm text-white/70 text-pretty">
+        Point at the issue, add a note by typing or speaking, then send.
       </p>
 
       {/* Bottom text-entry bar with speak option */}
