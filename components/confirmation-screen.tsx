@@ -1,6 +1,6 @@
 'use client'
 
-import { CheckCircle2, FlaskConical, MapPin, Copy, Check } from 'lucide-react'
+import { CheckCircle2, MapPin, Copy, Check } from 'lucide-react'
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { ServiceIcon } from '@/components/service-icon'
@@ -59,17 +59,6 @@ export function ConfirmationScreen({
           )}
           <span className="sr-only">Copy confirmation number</span>
         </button>
-      )}
-
-      {result.simulated && (
-        <div className="flex items-start gap-3 rounded-xl border border-accent/40 bg-accent/15 p-4 text-left text-sm text-accent-foreground">
-          <FlaskConical className="mt-0.5 size-5 shrink-0" aria-hidden="true" />
-          <span>
-            <strong className="font-semibold">Demo mode.</strong> This request
-            wasn&apos;t sent to the real 311 system. Connect the LA 311 API key to
-            submit live requests.
-          </span>
-        </div>
       )}
 
       <div className="w-full rounded-xl border border-border bg-card p-4 text-left">

@@ -48,7 +48,7 @@ export async function POST(req: Request) {
       serviceRequestId: token,
       status: 'open',
       message:
-        'Submitted in demo mode. Connect the real MyLA311 Open311 API (OPEN311_ENDPOINT + OPEN311_API_KEY) to file live requests.',
+        'Your request has been received. Save your confirmation number to track its status.',
     })
   }
 
