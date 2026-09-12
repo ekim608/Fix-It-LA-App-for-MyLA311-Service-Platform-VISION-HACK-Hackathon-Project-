@@ -6,11 +6,42 @@ import { PhotoCapture } from '@/components/photo-capture'
 import { ReviewForm } from '@/components/review-form'
 import { ConfirmationScreen } from '@/components/confirmation-screen'
 import { getService } from '@/lib/services'
-import { classifyDemoPhoto } from '@/lib/classify-demo'
+import { classifyDemoPhoto, DEMO_GPS } from '@/lib/classify-demo'
 import { emptyDraft } from '@/lib/types'
 import type { DraftRequest, SubmitResult } from '@/lib/types'
 
 type Step = 'photo' | 'classifying' | 'review' | 'done'
+
+type ResolvedLocation = { address: string; lat: number | null; lng: number | null }
+
+/** Read the device's real GPS position, then reverse geocode it to a street
+ *  address. Returns null if the user denies permission or it is unavailable,
+ *  so the caller can fall back. */
+async function resolveDeviceLocation(): Promise<ResolvedLocation | null> {
+  if (typeof navigator === 'undefined' || !('geolocation' in navigator)) {
+    return null
+  }
+  const position = await new Promise<GeolocationPosition | null>((resolve) => {
+    navigator.geolocation.getCurrentPosition(
+      (pos) => resolve(pos),
+      () => resolve(null),
+      { enableHighAccuracy: true, timeout: 10000 },
+    )
+  })
+  if (!position) return null
+
+  const lat = position.coords.latitude
+  const lng = position.coords.longitude
+  let address = ''
+  try {
+    const res = await fetch(`/api/geocode?lat=${lat}&lon=${lng}`)
+    const data = await res.json()
+    if (data.address) address = data.address as string
+  } catch {
+    // Non-fatal: keep the raw coordinates; the user can type the address.
+  }
+  return { address, lat, lng }
+}
 
 export function RequestFlow() {
   const [step, setStep] = useState<Step>('photo')
@@ -39,21 +70,30 @@ export function RequestFlow() {
       photoDataUrl: input.imageDataUrl,
     }
 
-    // Demo mode: the photo is classified locally so the flow needs no backend.
-    // It is scripted to a pothole with the location resolved from GPS, and the
-    // review form then opens pre-filled with the detected service.
+    // Demo mode: the note is classified locally so the flow needs no backend.
+    // The location, however, is the device's actual GPS position (reverse
+    // geocoded to a street address); MOCA is only a fallback if the user
+    // denies location or it is unavailable.
     const c = classifyDemoPhoto(input.note)
-    await new Promise((r) => setTimeout(r, 1100))
+    const [loc] = await Promise.all([
+      resolveDeviceLocation(),
+      new Promise((r) => setTimeout(r, 1100)),
+    ])
     const service = getService(c.serviceCode)
+    const resolved = loc ?? {
+      address: c.extractedLocation ?? DEMO_GPS.address,
+      lat: DEMO_GPS.lat,
+      lng: DEMO_GPS.lng,
+    }
     setDraft({
       ...base,
       serviceCode: c.serviceCode,
       title: c.title || service?.name || '',
       description: c.description || base.description,
       confidence: c.confidence,
-      address: c.extractedLocation || '',
-      lat: c.lat,
-      lng: c.lng,
+      address: resolved.address || c.extractedLocation || '',
+      lat: resolved.lat,
+      lng: resolved.lng,
       attributes: c.attributes,
     })
     setStep('review')

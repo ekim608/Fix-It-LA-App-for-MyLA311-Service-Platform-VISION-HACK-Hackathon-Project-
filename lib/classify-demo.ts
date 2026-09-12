@@ -56,10 +56,11 @@ export function classifyDemoPhoto(note?: string): DemoClassification {
       description:
         'Large pothole in the roadway creating a hazard for passing vehicles.',
       confidence: 0.94,
-      extractedLocation: DEMO_GPS.address,
+      // The location comes from the device's real GPS, resolved by the flow.
+      extractedLocation: null,
       attributes: { laneLocation: 'Right lane near the crosswalk' },
-      lat: DEMO_GPS.lat,
-      lng: DEMO_GPS.lng,
+      lat: null,
+      lng: null,
     }
   }
 
@@ -68,10 +69,11 @@ export function classifyDemoPhoto(note?: string): DemoClassification {
   return {
     ...base,
     description: cleanDescription(trimmed),
-    // Prefer an explicitly mentioned location; otherwise use the GPS fix.
-    extractedLocation: base.extractedLocation || DEMO_GPS.address,
-    lat: DEMO_GPS.lat,
-    lng: DEMO_GPS.lng,
+    // Only keep a location the user explicitly mentioned; the device's real
+    // GPS (resolved by the flow) is the primary source of the actual location.
+    extractedLocation: base.extractedLocation,
+    lat: null,
+    lng: null,
   }
 }
 
