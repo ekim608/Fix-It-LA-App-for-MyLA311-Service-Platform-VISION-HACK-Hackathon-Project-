@@ -7,6 +7,7 @@ import { ReviewForm } from '@/components/review-form'
 import { ConfirmationScreen } from '@/components/confirmation-screen'
 import { getService } from '@/lib/services'
 import { classifyDemoPhoto, DEMO_GPS } from '@/lib/classify-demo'
+import type { DemoClassification } from '@/lib/classify-demo'
 import { emptyDraft } from '@/lib/types'
 import type { DraftRequest, SubmitResult } from '@/lib/types'
 
@@ -25,6 +26,39 @@ async function geocodePrompt(place: string): Promise<ResolvedLocation | null> {
       address: data.address as string,
       lat: typeof data.lat === 'number' ? data.lat : null,
       lng: typeof data.lng === 'number' ? data.lng : null,
+    }
+  } catch {
+    return null
+  }
+}
+
+/** Send the captured photo to the vision model, which selects the matching
+ *  311 service and pre-fills its fields from what's visible. Returns null when
+ *  there's no image or the model can't be reached, so the caller falls back to
+ *  the local note classifier. */
+async function classifyFromImage(
+  imageDataUrl?: string,
+  note?: string,
+): Promise<DemoClassification | null> {
+  if (!imageDataUrl || !imageDataUrl.startsWith('data:image')) return null
+  try {
+    const res = await fetch('/api/classify-image', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ imageDataUrl, note }),
+    })
+    if (!res.ok) return null
+    const data = await res.json()
+    if (!data?.serviceCode) return null
+    return {
+      serviceCode: data.serviceCode as string,
+      title: (data.title as string) ?? '',
+      description: (data.description as string) ?? note ?? '',
+      confidence: typeof data.confidence === 'number' ? data.confidence : 0.8,
+      extractedLocation: (data.extractedLocation as string | null) ?? null,
+      attributes: (data.attributes as Record<string, string>) ?? {},
+      lat: null,
+      lng: null,
     }
   } catch {
     return null
@@ -87,11 +121,16 @@ export function RequestFlow() {
       photoDataUrl: input.imageDataUrl,
     }
 
-    // Demo mode: the note is classified locally so the flow needs no backend.
-    // Location priority: (1) a place the user named in their report, resolved
-    // to a real LA street address; (2) the device's actual GPS position; and
-    // only then (3) the demo fallback.
-    const c = classifyDemoPhoto(input.note)
+    // Primary path: send the captured photo to the vision model, which picks
+    // the right service and pre-fills its fields from what's actually visible.
+    // If that's unavailable (no photo, no model, or an error) we fall back to
+    // classifying the typed/spoken note locally so the flow always completes.
+    const c = (await classifyFromImage(input.imageDataUrl, input.note)) ??
+      classifyDemoPhoto(input.note)
+
+    // Location priority: (1) a place named in the report/photo, resolved to a
+    // real LA street address; (2) the device's actual GPS position; and only
+    // then (3) the demo fallback.
     const [promptLoc, deviceLoc] = await Promise.all([
       c.extractedLocation ? geocodePrompt(c.extractedLocation) : Promise.resolve(null),
       resolveDeviceLocation(),
