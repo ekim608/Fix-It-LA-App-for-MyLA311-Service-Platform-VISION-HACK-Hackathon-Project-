@@ -14,6 +14,23 @@ type Step = 'photo' | 'classifying' | 'review' | 'done'
 
 type ResolvedLocation = { address: string; lat: number | null; lng: number | null }
 
+/** Turn a place/landmark the user mentioned in their report into a real LA
+ *  street address with coordinates. Returns null if nothing matches. */
+async function geocodePrompt(place: string): Promise<ResolvedLocation | null> {
+  try {
+    const res = await fetch(`/api/geocode?q=${encodeURIComponent(place)}`)
+    const data = await res.json()
+    if (!data.address) return null
+    return {
+      address: data.address as string,
+      lat: typeof data.lat === 'number' ? data.lat : null,
+      lng: typeof data.lng === 'number' ? data.lng : null,
+    }
+  } catch {
+    return null
+  }
+}
+
 /** Read the device's real GPS position, then reverse geocode it to a street
  *  address. Returns null if the user denies permission or it is unavailable,
  *  so the caller can fall back. */
@@ -71,20 +88,22 @@ export function RequestFlow() {
     }
 
     // Demo mode: the note is classified locally so the flow needs no backend.
-    // The location, however, is the device's actual GPS position (reverse
-    // geocoded to a street address); MOCA is only a fallback if the user
-    // denies location or it is unavailable.
+    // Location priority: (1) a place the user named in their report, resolved
+    // to a real LA street address; (2) the device's actual GPS position; and
+    // only then (3) the demo fallback.
     const c = classifyDemoPhoto(input.note)
-    const [loc] = await Promise.all([
+    const [promptLoc, deviceLoc] = await Promise.all([
+      c.extractedLocation ? geocodePrompt(c.extractedLocation) : Promise.resolve(null),
       resolveDeviceLocation(),
       new Promise((r) => setTimeout(r, 1100)),
     ])
     const service = getService(c.serviceCode)
-    const resolved = loc ?? {
-      address: c.extractedLocation ?? DEMO_GPS.address,
-      lat: DEMO_GPS.lat,
-      lng: DEMO_GPS.lng,
-    }
+    const resolved = promptLoc ??
+      deviceLoc ?? {
+        address: c.extractedLocation ?? DEMO_GPS.address,
+        lat: DEMO_GPS.lat,
+        lng: DEMO_GPS.lng,
+      }
     setDraft({
       ...base,
       serviceCode: c.serviceCode,
