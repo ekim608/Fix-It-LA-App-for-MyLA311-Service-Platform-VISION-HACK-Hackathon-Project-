@@ -111,7 +111,9 @@ export function PhotoCapture({
 
     const recognition = new SpeechRecognition()
     recognition.lang = 'en-US'
-    recognition.continuous = true
+    // Non-continuous mode ends recognition automatically after the user
+    // pauses, so the mic stops on its own when they're done talking.
+    recognition.continuous = false
     recognition.interimResults = true
 
     baseNoteRef.current = note.trim()
@@ -124,11 +126,22 @@ export function PhotoCapture({
       const base = baseNoteRef.current
       const combined = base ? `${base} ${transcript}` : transcript
       setNote(combined.replace(/\s+/g, ' ').trimStart())
+
+      // Safety net: if the browser keeps the stream open, stop after a short
+      // silence gap following the latest speech so it doesn't listen forever.
+      listenTimer.current && clearTimeout(listenTimer.current)
+      listenTimer.current = setTimeout(() => {
+        try {
+          recognition.stop()
+        } catch {}
+      }, 2500)
     }
     recognition.onerror = () => {
+      listenTimer.current && clearTimeout(listenTimer.current)
       setListening(false)
     }
     recognition.onend = () => {
+      listenTimer.current && clearTimeout(listenTimer.current)
       setListening(false)
     }
 
