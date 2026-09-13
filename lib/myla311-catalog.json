@@ -1,0 +1,3922 @@
+[
+  {
+    "category": "Animal Complaint/Violation",
+    "form": "Animal Complaint/Violation",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=KvPFE6DNhBZYjwhJB5EUxVhX6FTrjLxQI23cYW24OsgeXH%2BgnKPNIuGeOk4QukRR&c__IsPortalUser=true",
+    "issueTypeId": "KvPFE6DNhBZYjwhJB5EUxVhX6FTrjLxQI23cYW24OsgeXH%2BgnKPNIuGeOk4QukRR",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "What type of complaint/violation are you reporting?",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Chicken/Rooster Distance",
+              "Dog Defecation",
+              "Dogs Allowed to Run-Off Leash",
+              "Too Many Pets",
+              "Unlicensed Dogs and Equines(Horses)"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Animal Complaint/Violation",
+    "form": "Animal Confined",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=nwGyydytwgd3tpBgTzivLU8IF0FlNjd%2F6i%2FmvxTh%2FMFyW9mnHK5M43S4oj0rcAFJ&c__IsPortalUser=true",
+    "issueTypeId": "nwGyydytwgd3tpBgTzivLU8IF0FlNjd%2F6i%2FmvxTh%2FMFyW9mnHK5M43S4oj0rcAFJ",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Are you reporting your own pet animal or a stray animal?",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Pet",
+              "Stray Animal"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Animal Complaint/Violation",
+    "form": "Animal Loose",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=8BryOaHaaUAdSbs29h6mAsiHeQ%2Bjw4TjV4MgXb8VL4oYmRV%2F%2BVByHx8uhCAx97H2&c__IsPortalUser=true",
+    "issueTypeId": "8BryOaHaaUAdSbs29h6mAsiHeQ%2Bjw4TjV4MgXb8VL4oYmRV%2F%2BVByHx8uhCAx97H2",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the Animal Type:",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Cat",
+              "Dog",
+              "Livestock (Horse, Cow, Pig, Sheep, etc..)",
+              "Other",
+              "Wildlife"
+            ]
+          },
+          {
+            "label": "Additional Comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Animal Complaint/Violation",
+    "form": "Dead Animal Removal",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=Q4vM5%2BCuJF8GvihsFYubnxRH7A6ncHy1IynAhVX15baqBCe1DFOwggt04zok2JKL&c__IsPortalUser=true",
+    "issueTypeId": "Q4vM5%2BCuJF8GvihsFYubnxRH7A6ncHy1IynAhVX15baqBCe1DFOwggt04zok2JKL",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Type to search...",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Location",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Alley",
+              "Back Yard",
+              "Beach",
+              "Curb",
+              "Drive Way",
+              "Front Yard",
+              "In Bag",
+              "Other",
+              "Parking Lot",
+              "Private Property",
+              "Side Walk",
+              "Street",
+              "Vacant Lot"
+            ]
+          },
+          {
+            "label": "Additional Comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "dropdown (custom)",
+            "required": false,
+            "options": [
+              "Bird",
+              "Cat",
+              "Dog",
+              "Opossum",
+              "Other",
+              "Other Wild Animals",
+              "Raccoon",
+              "Reptile",
+              "Rodent",
+              "Skunk",
+              "Squirrel"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Animal Complaint/Violation",
+    "form": "Nuisance Barking Dogs",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=G0L2YhNwwolUWBWfB5uNAavX455n9%2FbVEuMO4Xl%2BBRMd02K7sLGajINL0N61UIwv&c__IsPortalUser=true",
+    "issueTypeId": "G0L2YhNwwolUWBWfB5uNAavX455n9%2FbVEuMO4Xl%2BBRMd02K7sLGajINL0N61UIwv",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Bees or Beehive",
+    "form": "Bees or Beehive",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=IAtLKkFUy%2F3GEejEbodG4PF8o9%2F7IeRHjxDunEoDUptWgn4KmKgijJxjfUozNJ87&c__IsPortalUser=true",
+    "issueTypeId": "IAtLKkFUy%2F3GEejEbodG4PF8o9%2F7IeRHjxDunEoDUptWgn4KmKgijJxjfUozNJ87",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the location of the bees or beehives",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Median Island",
+              "Parkway"
+            ]
+          },
+          {
+            "label": "Date",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Time",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Additional Comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "dropdown (custom)",
+            "required": false,
+            "options": [
+              "12:00 AM",
+              "12:15 AM",
+              "12:30 AM",
+              "12:45 AM",
+              "1:00 AM",
+              "1:15 AM",
+              "1:30 AM",
+              "1:45 AM",
+              "2:00 AM",
+              "2:15 AM",
+              "2:30 AM",
+              "2:45 AM",
+              "3:00 AM",
+              "3:15 AM",
+              "3:30 AM",
+              "3:45 AM",
+              "4:00 AM",
+              "4:15 AM",
+              "4:30 AM",
+              "4:45 AM",
+              "5:00 AM",
+              "5:15 AM",
+              "5:30 AM",
+              "5:45 AM",
+              "6:00 AM",
+              "6:15 AM",
+              "6:30 AM",
+              "6:45 AM",
+              "7:00 AM",
+              "7:15 AM",
+              "7:30 AM",
+              "7:45 AM",
+              "8:00 AM",
+              "8:15 AM",
+              "8:30 AM",
+              "8:45 AM",
+              "9:00 AM",
+              "9:15 AM",
+              "9:30 AM",
+              "9:45 AM",
+              "10:00 AM",
+              "10:15 AM",
+              "10:30 AM",
+              "10:45 AM",
+              "11:00 AM",
+              "11:15 AM",
+              "11:30 AM",
+              "11:45 AM",
+              "12:00 PM",
+              "12:15 PM",
+              "12:30 PM",
+              "12:45 PM",
+              "1:00 PM",
+              "1:15 PM",
+              "1:30 PM",
+              "1:45 PM",
+              "2:00 PM",
+              "2:15 PM",
+              "2:30 PM",
+              "2:45 PM",
+              "3:00 PM",
+              "3:15 PM",
+              "3:30 PM",
+              "3:45 PM",
+              "4:00 PM",
+              "4:15 PM",
+              "4:30 PM",
+              "4:45 PM",
+              "5:00 PM",
+              "5:15 PM",
+              "5:30 PM",
+              "5:45 PM",
+              "6:00 PM",
+              "6:15 PM",
+              "6:30 PM",
+              "6:45 PM",
+              "7:00 PM",
+              "7:15 PM",
+              "7:30 PM",
+              "7:45 PM",
+              "8:00 PM",
+              "8:15 PM",
+              "8:30 PM",
+              "8:45 PM",
+              "9:00 PM",
+              "9:15 PM",
+              "9:30 PM",
+              "9:45 PM",
+              "10:00 PM",
+              "10:15 PM",
+              "10:30 PM",
+              "10:45 PM",
+              "11:00 PM",
+              "11:15 PM",
+              "11:30 PM",
+              "11:45 PM"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Bees or Beehive",
+    "form": "Landscape Maintenance",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=qOkAIeKdOFQT6WWrtZVJhFOGihc8oVnEwYsYcgO6c2zipYZshGbvm7HQQH7A1VGC&c__IsPortalUser=true",
+    "issueTypeId": "qOkAIeKdOFQT6WWrtZVJhFOGihc8oVnEwYsYcgO6c2zipYZshGbvm7HQQH7A1VGC",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the Issue Type",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Overgrown Vegetation/Plants",
+              "Palm Fronds Down",
+              "Weed Abatement for Pvt Parcels"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Bees or Beehive",
+    "form": "Street Tree Inspection",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=%2B%2BnLGT4%2B0Dq9z7JF6dCStow%2FQhDuW3S8LBdCjl%2Bsr2rYwg1vkr9Njjn5dMOyskqm&c__IsPortalUser=true",
+    "issueTypeId": "%2B%2BnLGT4%2B0Dq9z7JF6dCStow%2FQhDuW3S8LBdCjl%2Bsr2rYwg1vkr9Njjn5dMOyskqm",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the type of Street Tree Inspection",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Stump Removal",
+              "Tree Diseased or Infested",
+              "Tree Removal",
+              "Tree Stake",
+              "Tree Well"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Bees or Beehive",
+    "form": "Street Tree Violations",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=MHsCruazKf4a4pHGq4eY%2FF9%2Fcw8YBzr8YEVlLjxlmisNlEp8v5q%2BcWs%2B5aPBk1BA&c__IsPortalUser=true",
+    "issueTypeId": "MHsCruazKf4a4pHGq4eY%2FF9%2Fcw8YBzr8YEVlLjxlmisNlEp8v5q%2BcWs%2B5aPBk1BA",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the type of Street Tree Violations",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Illegal Planting of Artificial Turf",
+              "Illegal Tree Planting",
+              "Illegal Tree Removal",
+              "Illegal Tree Trim"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Bees or Beehive",
+    "form": "Tree Emergency",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=cnMaVn713mSd5Vrtxm8Yw5U28unuFoEn1OnukAKRCeNqfCQRbt0N3cLhhivT%2BH5B&c__IsPortalUser=true",
+    "issueTypeId": "cnMaVn713mSd5Vrtxm8Yw5U28unuFoEn1OnukAKRCeNqfCQRbt0N3cLhhivT%2BH5B",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the type of Tree Emergency",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Leaning Tree",
+              "Limb(s) Down",
+              "Limb Broken, Hanging or Split",
+              "Tree Down"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Bees or Beehive",
+    "form": "Tree Obstruction",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=y03d6M65WyZ1VxxIgPiMfCiWeem9G0hRFhXUkH3Z4nFGgmk%2BEPMjapRPsUIQe96A&c__IsPortalUser=true",
+    "issueTypeId": "y03d6M65WyZ1VxxIgPiMfCiWeem9G0hRFhXUkH3Z4nFGgmk%2BEPMjapRPsUIQe96A",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the location of the tree.",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Median Island Tree",
+              "Parkway Tree",
+              "Private Property Tree"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "ADA/Accessibility/Disability Complaints",
+    "form": "ADA/Accessibility/Disability Complaints",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=DPvugSuWWVkRmbXRXl%2F%2FmETAzbM%2FXnarm%2BgQO2apUXOuIzQt9RTLNZqxwkkJXmCf&c__IsPortalUser=true",
+    "issueTypeId": "DPvugSuWWVkRmbXRXl%2F%2FmETAzbM%2FXnarm%2BgQO2apUXOuIzQt9RTLNZqxwkkJXmCf",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "ADA/Accessibility/Disability Complaints",
+    "form": "Disability Related Modification or Accommodations",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=wrWNqe79Zo1%2FRMRrmKITxjcKkzwVa5cfSACCPK9MG%2BuqsJAFL%2FErKl25eEuJpVYP&c__IsPortalUser=true",
+    "issueTypeId": "wrWNqe79Zo1%2FRMRrmKITxjcKkzwVa5cfSACCPK9MG%2BuqsJAFL%2FErKl25eEuJpVYP",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "ADA/Accessibility/Disability Complaints",
+    "form": "Sidewalk Repair Access Request Program",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=cm9iLa521v1m2Z6%2BR%2BWnQKYKxMrmLvhrZJ0tK7SiHyOjkfeN3ZNJOVMbMKhkPYVF&c__IsPortalUser=true",
+    "issueTypeId": "cm9iLa521v1m2Z6%2BR%2BWnQKYKxMrmLvhrZJ0tK7SiHyOjkfeN3ZNJOVMbMKhkPYVF",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Are you a person with a Mobility Disability, or are you requesting on behalf of someone with a Mobility Disability?",
+            "type": "select",
+            "required": true,
+            "options": [
+              "I am a person with a Mobility Disability",
+              "I am requesting on behalf of someone with a Mobility Disability",
+              "Neither"
+            ]
+          },
+          {
+            "label": "Please provide required information",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "checkbox",
+            "required": true,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Graffiti Removal",
+    "form": "Graffiti Removal",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=h29A5nJCn9mDVwffkHxFelwUvbkOdc%2BPetUNBcAHBQ6SJJOg00r%2Bmo17U7onMu1a&c__IsPortalUser=true",
+    "issueTypeId": "h29A5nJCn9mDVwffkHxFelwUvbkOdc%2BPetUNBcAHBQ6SJJOg00r%2Bmo17U7onMu1a",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Type to search...",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Removal Method",
+            "type": "select",
+            "required": true,
+            "options": [
+              "No Preference",
+              "Chemical Solvent",
+              "Paint",
+              "Sandblast/Waterblast"
+            ]
+          },
+          {
+            "label": "Located above the first floor?",
+            "type": "select",
+            "required": false,
+            "options": [
+              "No",
+              "Yes"
+            ]
+          },
+          {
+            "label": "Located on a mural?",
+            "type": "select",
+            "required": false,
+            "options": [
+              "No",
+              "Yes"
+            ]
+          },
+          {
+            "label": "Relationship to Graffitied Location",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Manager",
+              "Other",
+              "Owner",
+              "Resident"
+            ]
+          },
+          {
+            "label": "Additional Comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "dropdown (custom)",
+            "required": false,
+            "options": [
+              "Alley-Door(s)",
+              "Alley-Garage",
+              "Alley-Wall(s)",
+              "Barricade",
+              "Brick Wall",
+              "Bridge",
+              "Building",
+              "Concrete Block Wall",
+              "Curb(s)",
+              "Door(s)",
+              "Driveway",
+              "Fence",
+              "Fire Hydrant",
+              "Garage",
+              "Granite Pole(s)",
+              "House-Building",
+              "Mailbox",
+              "Metal Pole(s)",
+              "Other",
+              "Overpass",
+              "Parking Lot",
+              "Pedestrian Furniture",
+              "Pedestrian Tunnel",
+              "Red Curb",
+              "Retaining Wall",
+              "Roll Down Doors",
+              "Sidewalk",
+              "Soundwalls",
+              "Stairs",
+              "Stop Sign(s)",
+              "Street(s)",
+              "Street Sign(s)",
+              "Stucco Wall(s)",
+              "Telephone Pole(s)",
+              "Traffic Control Box",
+              "Traffic Sign(s)",
+              "Tree(s)",
+              "Underpass",
+              "Walkway",
+              "Wall(s)",
+              "Windows"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Homeless Encampment",
+    "form": "Homeless Encampment",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=nRQGxkKyCVx8sybbLA4RZHDcGFFvO8LqLBSUEHwiZoQLr5NRiEx7AONDbl1l4qPN&c__IsPortalUser=true",
+    "issueTypeId": "nRQGxkKyCVx8sybbLA4RZHDcGFFvO8LqLBSUEHwiZoQLr5NRiEx7AONDbl1l4qPN",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Is the encampment in a brush area?",
+            "type": "select",
+            "required": true,
+            "options": [
+              "No",
+              "Yes"
+            ]
+          },
+          {
+            "label": "Is there an electrical safety concern?",
+            "type": "select",
+            "required": true,
+            "options": [
+              "No",
+              "Yes"
+            ]
+          },
+          {
+            "label": "Additional Comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Illegal Activities (Non-Emergency)",
+    "form": "Illegal Activities (Non-Emergency)",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=ruwq62PO6gHjB2SjrxSkIYktwNV%2Fg9GDrIoqGTdvt%2FkJaLSYlkCCW3HXjwbVIkXf&c__IsPortalUser=true",
+    "issueTypeId": "ruwq62PO6gHjB2SjrxSkIYktwNV%2Fg9GDrIoqGTdvt%2FkJaLSYlkCCW3HXjwbVIkXf",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Issue",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Dogs off Leash",
+              "Drugs / Alcohol",
+              "Illegal Vending",
+              "Other"
+            ]
+          },
+          {
+            "label": "Additional Comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Illegal Activities (Non-Emergency)",
+    "form": "Park Amenity and Facilities Repair",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=OW1aYaGtPeSB6klnFYx6XlLTsmkbkWEo%2FP3BzV0acXJrwnR60LVx9P0k5YC3bTRT&c__IsPortalUser=true",
+    "issueTypeId": "OW1aYaGtPeSB6klnFYx6XlLTsmkbkWEo%2FP3BzV0acXJrwnR60LVx9P0k5YC3bTRT",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Facility or Amenity Type",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Adult Fitness Equipment",
+              "Baseball/Softball Fields",
+              "Basketball Courts",
+              "Children's Playgrounds",
+              "Drinking Fountains",
+              "Golf Courses",
+              "Other",
+              "Recreation Centers/Buildings",
+              "Restrooms",
+              "Skate Parks",
+              "Sprinklers",
+              "Swimming Pools",
+              "Tennis Courts"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Illegal Activities (Non-Emergency)",
+    "form": "Park Cleanliness, Trash and Ground Maintenance",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=%2FX0CUk0n8%2BQx3weh%2FoI%2F6cB41GR54JXRdgYoMNBG2%2FBQDXwSkby823LLVTsVTpnF&c__IsPortalUser=true",
+    "issueTypeId": "%2FX0CUk0n8%2BQx3weh%2FoI%2F6cB41GR54JXRdgYoMNBG2%2FBQDXwSkby823LLVTsVTpnF",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the Issue Type",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Debris",
+              "Excessive Litter / Overflowing Trash Cans",
+              "Gopher Holes",
+              "Other"
+            ]
+          },
+          {
+            "label": "Additional Comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Illegal Activities (Non-Emergency)",
+    "form": "Trees or Pests in the Park",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=g3WrHyfKOBkijvqL5E7szicuc7UNhH9XvVK9rYK9amIFn%2B%2Fzrzte%2FAa56ZtPHz69&c__IsPortalUser=true",
+    "issueTypeId": "g3WrHyfKOBkijvqL5E7szicuc7UNhH9XvVK9rYK9amIFn%2B%2Fzrzte%2FAa56ZtPHz69",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Issue Category",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Bees",
+              "Bugs",
+              "Rodents",
+              "Trees"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Parking Zones",
+    "form": "Accessible Parking Zones",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=vNizn%2B0r2m8fGFDniZ0X3OVN3W8AiXo1mX%2F8B3lucybBA2POIwuhn32IowEWoVGm&c__IsPortalUser=true",
+    "issueTypeId": "vNizn%2B0r2m8fGFDniZ0X3OVN3W8AiXo1mX%2F8B3lucybBA2POIwuhn32IowEWoVGm",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Parking Zones",
+    "form": "Parking Issues",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=0ZQpyoNyludLED1fVb6Qs4FpFc9MWp9NETdFQxS5SUWFeKVbIwIFyw6IRjFHP%2F7T&c__IsPortalUser=true",
+    "issueTypeId": "0ZQpyoNyludLED1fVb6Qs4FpFc9MWp9NETdFQxS5SUWFeKVbIwIFyw6IRjFHP%2F7T",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the Issue Type",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Accessible Loading Zones",
+              "Business Parking with Meters",
+              "Business Parking Without Meters",
+              "Residential Parking"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Building Permit Inspection",
+    "form": "Building Permit Inspection",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=IozEc%2FQUuI5zYkf8ZwhCCgR7pID1llcoqfw972Mq9ycBCyY6CwfgGmvoHBcjDfZg&c__IsPortalUser=true",
+    "issueTypeId": "IozEc%2FQUuI5zYkf8ZwhCCgR7pID1llcoqfw972Mq9ycBCyY6CwfgGmvoHBcjDfZg",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Building Permit Inspection",
+    "form": "Private Property Violation",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=6MHCWDvaxWHzeWISCM5PuNQ9BMlBzrjP34HvdJl4KKZ65NdAxOQG5Ti5nkJIDHpB&c__IsPortalUser=true",
+    "issueTypeId": "6MHCWDvaxWHzeWISCM5PuNQ9BMlBzrjP34HvdJl4KKZ65NdAxOQG5Ti5nkJIDHpB",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Dockless Mobility Enforcement",
+    "form": "Dockless Mobility Enforcement",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=nSCw3%2BE%2BD06uLbAN3QI%2Bvc6blRgcJLSxPthqP8StGWY2R%2BfSGOr27HApC%2BgERpUI&c__IsPortalUser=true",
+    "issueTypeId": "nSCw3%2BE%2BD06uLbAN3QI%2Bvc6blRgcJLSxPthqP8StGWY2R%2BfSGOr27HApC%2BgERpUI",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Describe the Violation/Infraction/Issue",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Damaged or unsanitary Vehicle",
+              "Low Battery",
+              "Other",
+              "Parked on Private Property",
+              "Sidewalk Riding",
+              "Unpermitted Company and/or vehicle",
+              "Vehicle improperly parked (laying down, blocking sidewalk or building access, etc.)",
+              "Vehicle listed as available, but physically inaccessible"
+            ]
+          },
+          {
+            "label": "Please provide required information",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Dockless Mobility Enforcement",
+    "form": "Illegal Auto Repair or Construction, and Leaf Blower Violations",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=sAkBLzhtqXry%2FomUbyCWP24e2EVE9b3FxKGJk%2FOGyoeJy0uxhnjNBbSJWmu5ZAQ1&c__IsPortalUser=true",
+    "issueTypeId": "sAkBLzhtqXry%2FomUbyCWP24e2EVE9b3FxKGJk%2FOGyoeJy0uxhnjNBbSJWmu5ZAQ1",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the Issue Type",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Illegal Auto Repair",
+              "Illegal Construction",
+              "Leaf Blower Violations"
+            ]
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Dockless Mobility Enforcement",
+    "form": "Illegal Sign Removal, News Rack Issues",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=esOgqbOY%2BtiXw7irthA8u%2Fz94Vc2YROhWkfKOBbhF8rmGblbR3bJaG2Rob7SnoFr&c__IsPortalUser=true",
+    "issueTypeId": "esOgqbOY%2BtiXw7irthA8u%2Fz94Vc2YROhWkfKOBbhF8rmGblbR3bJaG2Rob7SnoFr",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the Issue Type",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Illegal Sign Removal",
+              "News-Rack Violation"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Dockless Mobility Enforcement",
+    "form": "Obstructions",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=bxBokQbNbr8TDAJXB54FQBbvNubuEoNRCiKuE1j5%2F174X1mGgIO7EP8HAMDTyM9L&c__IsPortalUser=true",
+    "issueTypeId": "bxBokQbNbr8TDAJXB54FQBbvNubuEoNRCiKuE1j5%2F174X1mGgIO7EP8HAMDTyM9L",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Issue Type",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Building Material",
+              "Dumpster/Construction Bin",
+              "Illegal Dumping Enforcement",
+              "Illegal Lane Closure",
+              "Other",
+              "Street Vending"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Dockless Mobility Enforcement",
+    "form": "Public Street Receptacles",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=RtJO471lBjEvCqwlbAiGZU3xWdcuNzk40U3PqpJAHDQmaWoLmxZ%2BX74cNbr6sUJK&c__IsPortalUser=true",
+    "issueTypeId": "RtJO471lBjEvCqwlbAiGZU3xWdcuNzk40U3PqpJAHDQmaWoLmxZ%2BX74cNbr6sUJK",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Dockless Mobility Enforcement",
+    "form": "Report Water Wasting",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=ZO8L9g%2Fd8oO%2BrN7dF%2BmmWvCKeWBZymHbXqHNKlfDM%2Fb4K0XoGbeFp460vViBhMPv&c__IsPortalUser=true",
+    "issueTypeId": "ZO8L9g%2Fd8oO%2BrN7dF%2BmmWvCKeWBZymHbXqHNKlfDM%2Fb4K0XoGbeFp460vViBhMPv",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Is this the first time you're reporting this violation?",
+            "type": "select",
+            "required": true,
+            "options": [
+              "No",
+              "Yes"
+            ]
+          },
+          {
+            "label": "Date",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Time",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Type to search...",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Nearest Intersection/Cross Street",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Additional Comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "dropdown (custom)",
+            "required": false,
+            "options": [
+              "12:00 AM",
+              "12:15 AM",
+              "12:30 AM",
+              "12:45 AM",
+              "1:00 AM",
+              "1:15 AM",
+              "1:30 AM",
+              "1:45 AM",
+              "2:00 AM",
+              "2:15 AM",
+              "2:30 AM",
+              "2:45 AM",
+              "3:00 AM",
+              "3:15 AM",
+              "3:30 AM",
+              "3:45 AM",
+              "4:00 AM",
+              "4:15 AM",
+              "4:30 AM",
+              "4:45 AM",
+              "5:00 AM",
+              "5:15 AM",
+              "5:30 AM",
+              "5:45 AM",
+              "6:00 AM",
+              "6:15 AM",
+              "6:30 AM",
+              "6:45 AM",
+              "7:00 AM",
+              "7:15 AM",
+              "7:30 AM",
+              "7:45 AM",
+              "8:00 AM",
+              "8:15 AM",
+              "8:30 AM",
+              "8:45 AM",
+              "9:00 AM",
+              "9:15 AM",
+              "9:30 AM",
+              "9:45 AM",
+              "10:00 AM",
+              "10:15 AM",
+              "10:30 AM",
+              "10:45 AM",
+              "11:00 AM",
+              "11:15 AM",
+              "11:30 AM",
+              "11:45 AM",
+              "12:00 PM",
+              "12:15 PM",
+              "12:30 PM",
+              "12:45 PM",
+              "1:00 PM",
+              "1:15 PM",
+              "1:30 PM",
+              "1:45 PM",
+              "2:00 PM",
+              "2:15 PM",
+              "2:30 PM",
+              "2:45 PM",
+              "3:00 PM",
+              "3:15 PM",
+              "3:30 PM",
+              "3:45 PM",
+              "4:00 PM",
+              "4:15 PM",
+              "4:30 PM",
+              "4:45 PM",
+              "5:00 PM",
+              "5:15 PM",
+              "5:30 PM",
+              "5:45 PM",
+              "6:00 PM",
+              "6:15 PM",
+              "6:30 PM",
+              "6:45 PM",
+              "7:00 PM",
+              "7:15 PM",
+              "7:30 PM",
+              "7:45 PM",
+              "8:00 PM",
+              "8:15 PM",
+              "8:30 PM",
+              "8:45 PM",
+              "9:00 PM",
+              "9:15 PM",
+              "9:30 PM",
+              "9:45 PM",
+              "10:00 PM",
+              "10:15 PM",
+              "10:30 PM",
+              "10:45 PM",
+              "11:00 PM",
+              "11:15 PM",
+              "11:30 PM",
+              "11:45 PM",
+              "Leak/Broken Sprinkler",
+              "Other Waste Water",
+              "Run-off",
+              "Wash-Down of Hardscapes",
+              "Watering Too Long",
+              "Wrong Day",
+              "Wrong Time"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Containers",
+    "form": "Containers",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=v%2FAtkqxaWRgu5qOnw4DvtHSWSNuL6VUxYik%2F%2FeTs8ck1%2B1KfbRewP%2BPmQ7YnUUlb&c__IsPortalUser=true",
+    "issueTypeId": "v%2FAtkqxaWRgu5qOnw4DvtHSWSNuL6VUxYik%2F%2FeTs8ck1%2B1KfbRewP%2BPmQ7YnUUlb",
+    "steps": [],
+    "note": "requires login or could not be accessed"
+  },
+  {
+    "category": "Containers",
+    "form": "Illegal Dumping Food Waste",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=O%2FVWTzgEgKYpb7dpWUidt%2Bjb4MhWirB34dT5M%2F5yKHAd%2BjRepNhPgxMC%2FPnYncw4&c__IsPortalUser=true",
+    "issueTypeId": "O%2FVWTzgEgKYpb7dpWUidt%2Bjb4MhWirB34dT5M%2F5yKHAd%2BjRepNhPgxMC%2FPnYncw4",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "(unlabeled)",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Location",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Alley",
+              "Center Median",
+              "Cul De Sac",
+              "Curb",
+              "Dead End",
+              "Easement/Pedestrian Walk",
+              "Gated Alley",
+              "On Bridge",
+              "Side Street",
+              "Sidewalk",
+              "Stairway",
+              "Stairway/Pedestrian Tunnel",
+              "Street",
+              "Under Bridge",
+              "Under Freeway"
+            ]
+          },
+          {
+            "label": "Additional Comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Containers",
+    "form": "Illegal Dumping Item Pickup",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=21FEPy1oY%2FYbR3An%2Fm1HEW81YnMZx1%2BBCTBIWKbJXnvl7s%2FatJ8ipGVyZSvXnRGy&c__IsPortalUser=true",
+    "issueTypeId": "21FEPy1oY%2FYbR3An%2Fm1HEW81YnMZx1%2BBCTBIWKbJXnvl7s%2FatJ8ipGVyZSvXnRGy",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Containers",
+    "form": "Item Pickups",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=YpUxU%2FHRueXjn3am0qpDj%2BhVUKZCg9OJpAK4JOIKCdg3XvhZIPPfjN64oxjE6VpB&c__IsPortalUser=true",
+    "issueTypeId": "YpUxU%2FHRueXjn3am0qpDj%2BhVUKZCg9OJpAK4JOIKCdg3XvhZIPPfjN64oxjE6VpB",
+    "steps": [],
+    "note": "requires login or could not be accessed"
+  },
+  {
+    "category": "Containers",
+    "form": "recycLA Billing Inquiry",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=PILdUnhHCG6VIpCf6mfxnE0A7scNlPPOhe6XRDO%2F7klk0dxzqKj0vqKG5NLZ8vFZ&c__IsPortalUser=true",
+    "issueTypeId": "PILdUnhHCG6VIpCf6mfxnE0A7scNlPPOhe6XRDO%2F7klk0dxzqKj0vqKG5NLZ8vFZ",
+    "steps": [],
+    "note": "requires login or could not be accessed"
+  },
+  {
+    "category": "Containers",
+    "form": "recycLA Complaint",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=lDUudlIDeb%2BQfMP1EJlk6%2FkV%2F4ib0%2BnULbw7z0mUMqMrWdpIuWISTk3ofxYk%2BmEO&c__IsPortalUser=true",
+    "issueTypeId": "lDUudlIDeb%2BQfMP1EJlk6%2FkV%2F4ib0%2BnULbw7z0mUMqMrWdpIuWISTk3ofxYk%2BmEO",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Containers",
+    "form": "recycLA Program Compliance",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=vy7jb3%2Fx9MPCmjV6F1M3Gc6YDTGI1umPHrPu7FtQpXofJ7SK2vA3VHCRk1kUBPwq&c__IsPortalUser=true",
+    "issueTypeId": "vy7jb3%2Fx9MPCmjV6F1M3Gc6YDTGI1umPHrPu7FtQpXofJ7SK2vA3VHCRk1kUBPwq",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Containers",
+    "form": "recycLA Waste Assessment",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=CbJhW4LDyl52gO1w4iq8MHvknRVQwQq%2FKzyKcIHVAEeRBSE05Zm2nBJLGVYGlUrZ&c__IsPortalUser=true",
+    "issueTypeId": "CbJhW4LDyl52gO1w4iq8MHvknRVQwQq%2FKzyKcIHVAEeRBSE05Zm2nBJLGVYGlUrZ",
+    "steps": [],
+    "note": "requires login or could not be accessed"
+  },
+  {
+    "category": "Containers",
+    "form": "Service Not Complete",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=lDRw1FDX4rcffag5Xirst%2BUeDW2DPsaLT79FXuUOIFoJNfNBCGvY4k4j%2BLkgCgYh&c__IsPortalUser=true",
+    "issueTypeId": "lDRw1FDX4rcffag5Xirst%2BUeDW2DPsaLT79FXuUOIFoJNfNBCGvY4k4j%2BLkgCgYh",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the SNC type:",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Illegal Dumping",
+              "Missed Collections"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Bus Stop Issues",
+    "form": "Accessible Bus Stop Issues",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=6FytiaKis32KNErL3b41UvdKT4VLCkoUqXW4hHnnK4V764GRhe7wYqdWCpfDqqLN&c__IsPortalUser=true",
+    "issueTypeId": "6FytiaKis32KNErL3b41UvdKT4VLCkoUqXW4hHnnK4V764GRhe7wYqdWCpfDqqLN",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Accessible Bus Stop Issues",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Bus Loading/Unloading Area Blocked by Tree",
+              "Need Loading Area for Access Services",
+              "Passenger Required to Unload into Roadway",
+              "Path to Bus Stop Blocked by Items on Sidewalk",
+              "Stopped Buses Block Crosswalk"
+            ]
+          },
+          {
+            "label": "Additional Comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Bus Stop Issues",
+    "form": "Barricade Removal",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=n%2B6TmeOmI4e5hqmGX3RJF6h1lGH05kjL4mQImc74mJBHP7n3tFVUqmSxYhAHwvjF&c__IsPortalUser=true",
+    "issueTypeId": "n%2B6TmeOmI4e5hqmGX3RJF6h1lGH05kjL4mQImc74mJBHP7n3tFVUqmSxYhAHwvjF",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the location of the Barricade Removal",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Alley",
+              "Sidewalk",
+              "Street"
+            ]
+          },
+          {
+            "label": "Additional Comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Bus Stop Issues",
+    "form": "Street Sweeping",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=7pQZqNRwvbgZ0FfvrF%2FAanEIG%2FUWrxmUtGTjscMfMt3ooQUsVfHIclVj%2FtIilYMv&c__IsPortalUser=true",
+    "issueTypeId": "7pQZqNRwvbgZ0FfvrF%2FAanEIG%2FUWrxmUtGTjscMfMt3ooQUsVfHIclVj%2FtIilYMv",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the location of the Street Sweeping",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Non-posted street",
+              "Posted No Parking Route"
+            ]
+          },
+          {
+            "label": "Additional Comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Bus Stop Issues",
+    "form": "Bicycle Facilities Issues",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=c6ieRC67%2FEDKAIYh6yYbRMGCvl1iuCIQj0l0QOi%2FrFWOjSAtkDvPsIUmWA5xG6ks&c__IsPortalUser=true",
+    "issueTypeId": "c6ieRC67%2FEDKAIYh6yYbRMGCvl1iuCIQj0l0QOi%2FrFWOjSAtkDvPsIUmWA5xG6ks",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the Issue Type",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Bicycle Sign",
+              "Bike Path Lighting",
+              "Bike Roadway Markings",
+              "Damaged/Broken Bike Rack"
+            ]
+          },
+          {
+            "label": "Additional Comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Bus Stop Issues",
+    "form": "Bus Stop Furniture",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=YsH48Ng5f0acB%2Blm4AU5IBTXyp9P1DUxmijFvEz0oH0RSyL8tImyaZavSI3k0Sij&c__IsPortalUser=true",
+    "issueTypeId": "YsH48Ng5f0acB%2Blm4AU5IBTXyp9P1DUxmijFvEz0oH0RSyL8tImyaZavSI3k0Sij",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "What are you requesting?",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Bus Stop Furniture Servicing"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Bus Stop Issues",
+    "form": "Bus Stop Parking Sign & Markings",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=DT8qQIZAC1W6JfvWMTiDlwuFaRXUItzlS7%2F1n7q2tu22efgKcb2Ucl4ZAmiSqM9%2B&c__IsPortalUser=true",
+    "issueTypeId": "DT8qQIZAC1W6JfvWMTiDlwuFaRXUItzlS7%2F1n7q2tu22efgKcb2Ucl4ZAmiSqM9%2B",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the Issue Type",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Bus Stop Sign",
+              "Curb Zone Faded / Missing",
+              "Other",
+              "Roadway Markings"
+            ]
+          },
+          {
+            "label": "Additional Comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Bus Stop Issues",
+    "form": "Curb Issues",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=7sIo%2BnQLlY6n7mlN%2Bck3OmFbMWDCBQRiqWj9Of0YAx7UcGbmFcJ5YZDwQjTiECqi&c__IsPortalUser=true",
+    "issueTypeId": "7sIo%2BnQLlY6n7mlN%2Bck3OmFbMWDCBQRiqWj9Of0YAx7UcGbmFcJ5YZDwQjTiECqi",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the Curb Issue Type",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Curb Zones - Repainting"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Bus Stop Issues",
+    "form": "Flooding",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=Nr6wA%2FrBVkqzapnj2EgwMmzfIg7l8WPp1u9DC0m1Tc8l0%2BadzY1aHR9%2BgHtUSXxu&c__IsPortalUser=true",
+    "issueTypeId": "Nr6wA%2FrBVkqzapnj2EgwMmzfIg7l8WPp1u9DC0m1Tc8l0%2BadzY1aHR9%2BgHtUSXxu",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the location of the Flooding",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Alley",
+              "Street"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Bus Stop Issues",
+    "form": "General Street Inspection",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=hynrREmjrhMyfZys9UJUj3lh99xsKrD9MDom%2BcET7dd2xxuFGaywrErH0TdNeNbF&c__IsPortalUser=true",
+    "issueTypeId": "hynrREmjrhMyfZys9UJUj3lh99xsKrD9MDom%2BcET7dd2xxuFGaywrErH0TdNeNbF",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the Issue Type",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Oil Spills",
+              "Other"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Bus Stop Issues",
+    "form": "Guard/Warning Rail Maintenance",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=vzSnGetcwerk8NekbiPV5qVNY95e75bGwYtfBKVQTqJeAn2EKDSGB3%2BshTDEpQM7&c__IsPortalUser=true",
+    "issueTypeId": "vzSnGetcwerk8NekbiPV5qVNY95e75bGwYtfBKVQTqJeAn2EKDSGB3%2BshTDEpQM7",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "What are you requesting?",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Repair",
+              "Replace"
+            ]
+          },
+          {
+            "label": "Additional Comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Bus Stop Issues",
+    "form": "Illegal Discharge of Water",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=%2F2adh8bRYkLNeMKHesE8Deb%2FA1PegQHGrPaTfUU9NsjWx7%2BKpLiHA1X4ypCuQJtr&c__IsPortalUser=true",
+    "issueTypeId": "%2F2adh8bRYkLNeMKHesE8Deb%2FA1PegQHGrPaTfUU9NsjWx7%2BKpLiHA1X4ypCuQJtr",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the location of the Illegal Discharge of Water",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Alley",
+              "Sidewalk",
+              "Street"
+            ]
+          },
+          {
+            "label": "Additional Comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Bus Stop Issues",
+    "form": "Median Island Maintenance",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=9ibg83mwItxJpn1clw854%2By5Ld35hXT2rjL77yr%2FWHd3NHZiWrRhrX%2F6Q36A6Stm&c__IsPortalUser=true",
+    "issueTypeId": "9ibg83mwItxJpn1clw854%2By5Ld35hXT2rjL77yr%2FWHd3NHZiWrRhrX%2F6Q36A6Stm",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the median island type",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Improved (irrigation, plants)",
+              "Unimproved"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Bus Stop Issues",
+    "form": "Parking Meter Maintenance",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=sWd4KamwDiBK1u6lhU3p4TQ9kGR%2BIMUWH47hgPyjH7ZauE3VtTdxJ8XXQ0c2dmtM&c__IsPortalUser=true",
+    "issueTypeId": "sWd4KamwDiBK1u6lhU3p4TQ9kGR%2BIMUWH47hgPyjH7ZauE3VtTdxJ8XXQ0c2dmtM",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Can you provide a meter number located on the body of the parking meter?",
+            "type": "select",
+            "required": false,
+            "options": [
+              "No",
+              "Yes"
+            ]
+          },
+          {
+            "label": "Select the Issue Type",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Damaged Meter Post",
+              "Meter Head Repair",
+              "Vandalism"
+            ]
+          },
+          {
+            "label": "Additional Comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Bus Stop Issues",
+    "form": "Report a Sidewalk Problem",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=QeUsSaM0ral9geo%2BEWXuK7jAJ%2B7ydMeRmUq5G9K2viLPPo9XEYTxUak5i9Hg18x7&c__IsPortalUser=true",
+    "issueTypeId": "QeUsSaM0ral9geo%2BEWXuK7jAJ%2B7ydMeRmUq5G9K2viLPPo9XEYTxUak5i9Hg18x7",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Bus Stop Issues",
+    "form": "Street Pavement Issues",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=qY%2Fy4LIhKrMmE4t7SNca6nz5rwmf3HZh9fvLGZkUi5QvXWNihZClgkLyTG2NVSpH&c__IsPortalUser=true",
+    "issueTypeId": "qY%2Fy4LIhKrMmE4t7SNca6nz5rwmf3HZh9fvLGZkUi5QvXWNihZClgkLyTG2NVSpH",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the Issue Type",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Pavement Marking Maintenance",
+              "Pothole - Small Asphalt Repair"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Bus Stop Issues",
+    "form": "Streetlight Repair Services",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=XYCFaVarVDFhoIJpHZhDZzZK8G4RzSH8zd1%2BMuQXT3XxvfLN9YVyRGq%2BxVS%2FcKQ7&c__IsPortalUser=true",
+    "issueTypeId": "XYCFaVarVDFhoIJpHZhDZzZK8G4RzSH8zd1%2BMuQXT3XxvfLN9YVyRGq%2BxVS%2FcKQ7",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the streetlight repair service",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Streetlight(s) Repair",
+              "Streetlight-Attached EV Charger Repair",
+              "Telecom Attachment Repair",
+              "STAP (Sidewalk and Transit Amenities Program) Maintenance"
+            ]
+          },
+          {
+            "label": "Is the equipment on/operational?",
+            "type": "select",
+            "required": true,
+            "options": [
+              "No",
+              "Yes"
+            ]
+          },
+          {
+            "label": "Please provide required information",
+            "type": "text",
+            "required": true,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Bus Stop Issues",
+    "form": "Streetlight Non-Repair Services",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=ZwQ5cjcPsbQZ58UU3fQcMJaTxECkBnqU2Twgl1dyAxYpgxuZv%2BqOeK4KdraJeH3R&c__IsPortalUser=true",
+    "issueTypeId": "ZwQ5cjcPsbQZ58UU3fQcMJaTxECkBnqU2Twgl1dyAxYpgxuZv%2BqOeK4KdraJeH3R",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "What streetlight-related service would you like to report?",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Community Decorative or Festive Lighting",
+              "Glare Shield Installation",
+              "Outdoor Area Lighting"
+            ]
+          },
+          {
+            "label": "Additional Comments",
+            "type": "text",
+            "required": true,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Bus Stop Issues",
+    "form": "Streetlight ADA Repair Services",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=RsJwuvjOyyzCwJibeIzagzySvWMie6RsHSzjTvtyH1WHir472qK%2Buj4G%2FbbPHwqa&c__IsPortalUser=true",
+    "issueTypeId": "RsJwuvjOyyzCwJibeIzagzySvWMie6RsHSzjTvtyH1WHir472qK%2Buj4G%2FbbPHwqa",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Bus Stop Issues",
+    "form": "Traffic Sign Issues",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=nfu8Hcz87zzYNV0fu%2BZNoqHZZD7jLEgE8Ud1AUyi1wRwMv%2BRjd1LTnNZK7Q6FfUw&c__IsPortalUser=true",
+    "issueTypeId": "nfu8Hcz87zzYNV0fu%2BZNoqHZZD7jLEgE8Ud1AUyi1wRwMv%2BRjd1LTnNZK7Q6FfUw",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Is it an emergency sign maintenance issue?",
+            "type": "select",
+            "required": true,
+            "options": [
+              "No",
+              "Yes"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accessible Bus Stop Issues",
+    "form": "Traffic Signal Issues",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=bjdKW6qeuI4a5idJMvDfQPsQSxkN6UDPJtZkgbcWKD4%2B%2BpCXUR3ZtnSLYnfO0ueB&c__IsPortalUser=true",
+    "issueTypeId": "bjdKW6qeuI4a5idJMvDfQPsQSxkN6UDPJtZkgbcWKD4%2B%2BpCXUR3ZtnSLYnfO0ueB",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Is the Traffic Signal issue an emergency?",
+            "type": "select",
+            "required": false,
+            "options": [
+              "No",
+              "Yes"
+            ]
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Traffic Safety",
+    "form": "Traffic Safety",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=j7R34m0sP0ujbST3lVx%2BlAoGj4mtXfTBD2S1UrM%2FRTAky%2FIndOW7ppaRu6uANhO7&c__IsPortalUser=true",
+    "issueTypeId": "j7R34m0sP0ujbST3lVx%2BlAoGj4mtXfTBD2S1UrM%2FRTAky%2FIndOW7ppaRu6uANhO7",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the Safety Concern",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Bicycle Safety",
+              "Bus Stop Safety",
+              "Equestrian Safety",
+              "Neighborhood Safety",
+              "Pedestrian Accessibility Issues",
+              "Pedestrian Safety",
+              "School Safety",
+              "Vehicle Safety"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Watershed Protection Division (WPD) Enforcement",
+    "form": "Watershed Protection Division (WPD) Enforcement",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=LmWhardYd4Gt5viAECZlWGaIyQMfbvLSWPm8folQx1h6Vw26dBajsXxrbrOh9cUz&c__IsPortalUser=true",
+    "issueTypeId": "LmWhardYd4Gt5viAECZlWGaIyQMfbvLSWPm8folQx1h6Vw26dBajsXxrbrOh9cUz",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Issue Type",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Abandoned Hazardous Waste",
+              "Storm Water"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "dropdown (custom)",
+            "required": false,
+            "options": [
+              "Biohazard (Feces, Syringes)",
+              "Chemicals",
+              "Corrosive",
+              "Explosive",
+              "Flammable",
+              "Unknown"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Feedback",
+    "form": "Feedback",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=gmog05DTbXN4SI3xW5rSpwbzb9nSv2zSNBp7wFQjiIg96ELj%2BMKl72Bsl25hx%2BjP&c__IsPortalUser=true",
+    "issueTypeId": "gmog05DTbXN4SI3xW5rSpwbzb9nSv2zSNBp7wFQjiIg96ELj%2BMKl72Bsl25hx%2BjP",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Feedback",
+    "form": "Land/Mud Slide",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=HwbafHAlx2F9xNJEmgUNRRpZcKdGBHn5xYNamFqjUmKg0IKGrlg6AXQpapuuYDos&c__IsPortalUser=true",
+    "issueTypeId": "HwbafHAlx2F9xNJEmgUNRRpZcKdGBHn5xYNamFqjUmKg0IKGrlg6AXQpapuuYDos",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "Request Anonymously",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "Select the location of the Land/Mud Slide",
+            "type": "select",
+            "required": true,
+            "options": [
+              "Alley",
+              "Other",
+              "Sidewalk",
+              "Street"
+            ]
+          },
+          {
+            "label": "Please provide any additional comments",
+            "type": "text",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "(unlabeled)",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Decline to Answer",
+              "No",
+              "Yes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Feedback",
+    "form": "Other",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=PzNY4e0evzW0V88PmtrMTXntCzUIrXROHlejjeomYp9XfMoACx66jvI4jOapJEVJ&c__IsPortalUser=true",
+    "issueTypeId": "PzNY4e0evzW0V88PmtrMTXntCzUIrXROHlejjeomYp9XfMoACx66jvI4jOapJEVJ",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": false,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Feedback",
+    "form": "Request for Terminal Access Routes",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=K4SqkTSgzm59M5ShkQ4tCE44HBiLmzbKAgUaRuKzZ0P%2B%2F0Nq1AR%2FTDrkwzVI3rjj&c__IsPortalUser=true",
+    "issueTypeId": "K4SqkTSgzm59M5ShkQ4tCE44HBiLmzbKAgUaRuKzZ0P%2B%2F0Nq1AR%2FTDrkwzVI3rjj",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Feedback",
+    "form": "Searchlight & Generator Permits",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=wbcm%2FO7nMmL%2FZpkk09viCRSUhbcM4bCkyJCpZLfrbYkPT5gVWqbvd%2B7%2BtrILB%2FsL&c__IsPortalUser=true",
+    "issueTypeId": "wbcm%2FO7nMmL%2FZpkk09viCRSUhbcM4bCkyJCpZLfrbYkPT5gVWqbvd%2B7%2BtrILB%2FsL",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Feedback",
+    "form": "Sewer or Sidewalk Rebates",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=Ybwwi8qGnZNbSjsdeoJVes492W8DGgmxYKS6z3%2BIh2qTBwX%2BgXorsJUlI%2BmI4Dev&c__IsPortalUser=true",
+    "issueTypeId": "Ybwwi8qGnZNbSjsdeoJVes492W8DGgmxYKS6z3%2BIh2qTBwX%2BgXorsJUlI%2BmI4Dev",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Feedback",
+    "form": "Taxi Complaints",
+    "url": "https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=dd9j2acetGN6S5n%2BXS0EZawmrLa9RJIKHZhk57QhRWmyxsc06WtchsTBg4H6%2FG2X&c__IsPortalUser=true",
+    "issueTypeId": "dd9j2acetGN6S5n%2BXS0EZawmrLa9RJIKHZhk57QhRWmyxsc06WtchsTBg4H6%2FG2X",
+    "steps": [
+      {
+        "step": "Step 1",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      },
+      {
+        "step": "Step 2",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Email",
+            "type": "text",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Phone Number",
+            "type": "tel",
+            "required": true,
+            "options": []
+          },
+          {
+            "label": "Extension",
+            "type": "text",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
+  }
+]

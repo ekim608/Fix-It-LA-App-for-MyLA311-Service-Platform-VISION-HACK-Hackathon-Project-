@@ -9,6 +9,17 @@ import {
   PawPrint,
   Tent,
   CircleHelp,
+  Bug,
+  Accessibility,
+  TriangleAlert,
+  CircleParking,
+  HardHat,
+  Bike,
+  Container,
+  BusFront,
+  TrafficCone,
+  Droplets,
+  MessageSquare,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -23,6 +34,17 @@ const ICONS: Record<string, LucideIcon> = {
   PawPrint,
   Tent,
   CircleHelp,
+  Bug,
+  Accessibility,
+  TriangleAlert,
+  CircleParking,
+  HardHat,
+  Bike,
+  Container,
+  BusFront,
+  TrafficCone,
+  Droplets,
+  MessageSquare,
 }
 
 export function ServiceIcon({
