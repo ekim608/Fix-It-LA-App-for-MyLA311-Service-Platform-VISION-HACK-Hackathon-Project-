@@ -50,18 +50,14 @@ export function classifyDemoPhoto(note?: string): DemoClassification {
 
   if (!trimmed) {
     // Image-only path with no vision result available (e.g. the AI Gateway
-    // vision call couldn't run). We have no real signal about what's in the
-    // photo, so default to the neutral "Other" service instead of guessing a
-    // specific category — the user picks the right one on the review screen.
-    const service = getService('OTHER')!
+    // vision call couldn't run). Fall back to the scripted pothole report so
+    // the flow always demos end to end.
+    const base = classifyDemo(SCRIPTED_PHOTO_NOTE)
     return {
-      serviceCode: service.code,
-      title: service.name,
-      description: '',
-      confidence: 0.3,
+      ...base,
+      description: cleanDescription(SCRIPTED_PHOTO_NOTE),
       // The location comes from the device's real GPS, resolved by the flow.
       extractedLocation: null,
-      attributes: {},
       lat: null,
       lng: null,
     }
