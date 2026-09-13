@@ -10,7 +10,7 @@ export const maxDuration = 30
 // free GOOGLE_GENERATIVE_AI_API_KEY) so image analysis runs on Google's free
 // tier instead of the paid AI Gateway. Gemini Flash is fast and multimodal,
 // keeping the capture-to-review step snappy.
-const VISION_MODEL = google('gemini-2.5-flash')
+const VISION_MODEL = google('gemini-3.6-flash')
 
 type ClassifyImageBody = {
   imageDataUrl?: string
