@@ -5,8 +5,9 @@ import { SERVICES, SERVICE_CODES, getService } from '@/lib/services'
 export const maxDuration = 30
 
 // Vision model used to look at the captured photo and pick the right 311
-// service. A fast multimodal model keeps the capture-to-review step snappy.
-const VISION_MODEL = 'openai/gpt-4.1-mini'
+// service. Claude Haiku is a fast, cost-effective multimodal model that keeps
+// the capture-to-review step snappy.
+const VISION_MODEL = 'anthropic/claude-haiku-4.5'
 
 type ClassifyImageBody = {
   imageDataUrl?: string
