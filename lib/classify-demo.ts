@@ -49,16 +49,19 @@ export function classifyDemoPhoto(note?: string): DemoClassification {
   const trimmed = note?.trim()
 
   if (!trimmed) {
-    const service = getService('POTHOLE')!
+    // Image-only path with no vision result available (e.g. the AI Gateway
+    // vision call couldn't run). We have no real signal about what's in the
+    // photo, so default to the neutral "Other" service instead of guessing a
+    // specific category — the user picks the right one on the review screen.
+    const service = getService('OTHER')!
     return {
       serviceCode: service.code,
       title: service.name,
-      description:
-        'Large pothole in the roadway creating a hazard for passing vehicles.',
-      confidence: 0.94,
+      description: '',
+      confidence: 0.3,
       // The location comes from the device's real GPS, resolved by the flow.
       extractedLocation: null,
-      attributes: { laneLocation: 'Right lane near the crosswalk' },
+      attributes: {},
       lat: null,
       lng: null,
     }
