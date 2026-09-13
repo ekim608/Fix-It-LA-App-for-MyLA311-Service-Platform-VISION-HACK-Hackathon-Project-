@@ -1,0 +1,2429 @@
+
+============================================================
+Category: Animal Complaint/Violation
+Form:     Animal Complaint/Violation
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=KvPFE6DNhBZYjwhJB5EUxVhX6FTrjLxQI23cYW24OsgeXH%2BgnKPNIuGeOk4QukRR&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *What type of complaint/violation are you reporting? (required)
+    Type:  select
+    Options:
+      - Chicken/Rooster Distance
+      - Dog Defecation
+      - Dogs Allowed to Run-Off Leash
+      - Too Many Pets
+      - Unlicensed Dogs and Equines(Horses)
+
+    Field: Please provide any additional comments
+    Type:  text
+
+============================================================
+Category: Animal Complaint/Violation
+Form:     Animal Confined
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=nwGyydytwgd3tpBgTzivLU8IF0FlNjd%2F6i%2FmvxTh%2FMFyW9mnHK5M43S4oj0rcAFJ&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Are you reporting your own pet animal or a stray animal? (required)
+    Type:  select
+    Options:
+      - Pet
+      - Stray Animal
+
+    Field: Please provide any additional comments
+    Type:  text
+
+============================================================
+Category: Animal Complaint/Violation
+Form:     Animal Loose
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=8BryOaHaaUAdSbs29h6mAsiHeQ%2Bjw4TjV4MgXb8VL4oYmRV%2F%2BVByHx8uhCAx97H2&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the Animal Type: (required)
+    Type:  select
+    Options:
+      - Cat
+      - Dog
+      - Livestock (Horse, Cow, Pig, Sheep, etc..)
+      - Other
+      - Wildlife
+
+    Field: Additional Comments
+    Type:  text
+
+============================================================
+Category: Animal Complaint/Violation
+Form:     Dead Animal Removal
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=Q4vM5%2BCuJF8GvihsFYubnxRH7A6ncHy1IynAhVX15baqBCe1DFOwggt04zok2JKL&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: Type to search...
+    Type:  text
+
+    Field: *Location (required)
+    Type:  select
+    Options:
+      - Alley
+      - Back Yard
+      - Beach
+      - Curb
+      - Drive Way
+      - Front Yard
+      - In Bag
+      - Other
+      - Parking Lot
+      - Private Property
+      - Side Walk
+      - Street
+      - Vacant Lot
+
+    Field: Additional Comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  dropdown (custom)
+    Options:
+      - Bird
+      - Cat
+      - Dog
+      - Opossum
+      - Other
+      - Other Wild Animals
+      - Raccoon
+      - Reptile
+      - Rodent
+      - Skunk
+      - Squirrel
+
+============================================================
+Category: Animal Complaint/Violation
+Form:     Nuisance Barking Dogs
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=G0L2YhNwwolUWBWfB5uNAavX455n9%2FbVEuMO4Xl%2BBRMd02K7sLGajINL0N61UIwv&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: Phone Number
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+  -- Step 2 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: Phone Number
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+============================================================
+Category: Bees or Beehive
+Form:     Bees or Beehive
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=IAtLKkFUy%2F3GEejEbodG4PF8o9%2F7IeRHjxDunEoDUptWgn4KmKgijJxjfUozNJ87&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the location of the bees or beehives (required)
+    Type:  select
+    Options:
+      - Median Island
+      - Parkway
+
+    Field: *Date (required)
+    Type:  text
+
+    Field: *Time (required)
+    Type:  text
+
+    Field: Additional Comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  dropdown (custom)
+    Options:
+      - 12:00 AM
+      - 12:15 AM
+      - 12:30 AM
+      - 12:45 AM
+      - 1:00 AM
+      - 1:15 AM
+      - 1:30 AM
+      - 1:45 AM
+      - 2:00 AM
+      - 2:15 AM
+      - 2:30 AM
+      - 2:45 AM
+      - 3:00 AM
+      - 3:15 AM
+      - 3:30 AM
+      - 3:45 AM
+      - 4:00 AM
+      - 4:15 AM
+      - 4:30 AM
+      - 4:45 AM
+      - 5:00 AM
+      - 5:15 AM
+      - 5:30 AM
+      - 5:45 AM
+      - 6:00 AM
+      - 6:15 AM
+      - 6:30 AM
+      - 6:45 AM
+      - 7:00 AM
+      - 7:15 AM
+      - 7:30 AM
+      - 7:45 AM
+      - 8:00 AM
+      - 8:15 AM
+      - 8:30 AM
+      - 8:45 AM
+      - 9:00 AM
+      - 9:15 AM
+      - 9:30 AM
+      - 9:45 AM
+      - 10:00 AM
+      - 10:15 AM
+      - 10:30 AM
+      - 10:45 AM
+      - 11:00 AM
+      - 11:15 AM
+      - 11:30 AM
+      - 11:45 AM
+      - 12:00 PM
+      - 12:15 PM
+      - 12:30 PM
+      - 12:45 PM
+      - 1:00 PM
+      - 1:15 PM
+      - 1:30 PM
+      - 1:45 PM
+      - 2:00 PM
+      - 2:15 PM
+      - 2:30 PM
+      - 2:45 PM
+      - 3:00 PM
+      - 3:15 PM
+      - 3:30 PM
+      - 3:45 PM
+      - 4:00 PM
+      - 4:15 PM
+      - 4:30 PM
+      - 4:45 PM
+      - 5:00 PM
+      - 5:15 PM
+      - 5:30 PM
+      - 5:45 PM
+      - 6:00 PM
+      - 6:15 PM
+      - 6:30 PM
+      - 6:45 PM
+      - 7:00 PM
+      - 7:15 PM
+      - 7:30 PM
+      - 7:45 PM
+      - 8:00 PM
+      - 8:15 PM
+      - 8:30 PM
+      - 8:45 PM
+      - 9:00 PM
+      - 9:15 PM
+      - 9:30 PM
+      - 9:45 PM
+      - 10:00 PM
+      - 10:15 PM
+      - 10:30 PM
+      - 10:45 PM
+      - 11:00 PM
+      - 11:15 PM
+      - 11:30 PM
+      - 11:45 PM
+
+============================================================
+Category: Bees or Beehive
+Form:     Landscape Maintenance
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=qOkAIeKdOFQT6WWrtZVJhFOGihc8oVnEwYsYcgO6c2zipYZshGbvm7HQQH7A1VGC&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the Issue Type (required)
+    Type:  select
+    Options:
+      - Overgrown Vegetation/Plants
+      - Palm Fronds Down
+      - Weed Abatement for Pvt Parcels
+
+    Field: Please provide any additional comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Bees or Beehive
+Form:     Street Tree Inspection
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=%2B%2BnLGT4%2B0Dq9z7JF6dCStow%2FQhDuW3S8LBdCjl%2Bsr2rYwg1vkr9Njjn5dMOyskqm&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the type of Street Tree Inspection (required)
+    Type:  select
+    Options:
+      - Stump Removal
+      - Tree Diseased or Infested
+      - Tree Removal
+      - Tree Stake
+      - Tree Well
+
+    Field: Please provide any additional comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Bees or Beehive
+Form:     Street Tree Violations
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=MHsCruazKf4a4pHGq4eY%2FF9%2Fcw8YBzr8YEVlLjxlmisNlEp8v5q%2BcWs%2B5aPBk1BA&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the type of Street Tree Violations (required)
+    Type:  select
+    Options:
+      - Illegal Planting of Artificial Turf
+      - Illegal Tree Planting
+      - Illegal Tree Removal
+      - Illegal Tree Trim
+
+    Field: Please provide any additional comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Bees or Beehive
+Form:     Tree Emergency
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=cnMaVn713mSd5Vrtxm8Yw5U28unuFoEn1OnukAKRCeNqfCQRbt0N3cLhhivT%2BH5B&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the type of Tree Emergency (required)
+    Type:  select
+    Options:
+      - Leaning Tree
+      - Limb(s) Down
+      - Limb Broken, Hanging or Split
+      - Tree Down
+
+    Field: Please provide any additional comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Bees or Beehive
+Form:     Tree Obstruction
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=y03d6M65WyZ1VxxIgPiMfCiWeem9G0hRFhXUkH3Z4nFGgmk%2BEPMjapRPsUIQe96A&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the location of the tree. (required)
+    Type:  select
+    Options:
+      - Median Island Tree
+      - Parkway Tree
+      - Private Property Tree
+
+    Field: Please provide any additional comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: ADA/Accessibility/Disability Complaints
+Form:     ADA/Accessibility/Disability Complaints
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=DPvugSuWWVkRmbXRXl%2F%2FmETAzbM%2FXnarm%2BgQO2apUXOuIzQt9RTLNZqxwkkJXmCf&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: Phone Number
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+  -- Step 2 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: Phone Number
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+============================================================
+Category: ADA/Accessibility/Disability Complaints
+Form:     Disability Related Modification or Accommodations
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=wrWNqe79Zo1%2FRMRrmKITxjcKkzwVa5cfSACCPK9MG%2BuqsJAFL%2FErKl25eEuJpVYP&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: Phone Number
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+  -- Step 2 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: Phone Number
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+============================================================
+Category: ADA/Accessibility/Disability Complaints
+Form:     Sidewalk Repair Access Request Program
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=cm9iLa521v1m2Z6%2BR%2BWnQKYKxMrmLvhrZJ0tK7SiHyOjkfeN3ZNJOVMbMKhkPYVF&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: Email
+    Type:  text
+
+    Field: Phone Number
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+  -- Step 2 --
+
+    Field: *Are you a person with a Mobility Disability, or are you requesting on behalf of someone with a Mobility Disability? (required)
+    Type:  select
+    Options:
+      - I am a person with a Mobility Disability
+      - I am requesting on behalf of someone with a Mobility Disability
+      - Neither
+
+    Field: Please provide required information (required)
+    Type:  text
+
+    Field: (unlabeled) (required)
+    Type:  checkbox
+
+============================================================
+Category: Graffiti Removal
+Form:     Graffiti Removal
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=h29A5nJCn9mDVwffkHxFelwUvbkOdc%2BPetUNBcAHBQ6SJJOg00r%2Bmo17U7onMu1a&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: Type to search...
+    Type:  text
+
+    Field: *Removal Method (required)
+    Type:  select
+    Options:
+      - No Preference
+      - Chemical Solvent
+      - Paint
+      - Sandblast/Waterblast
+
+    Field: Located above the first floor?
+    Type:  select
+    Options:
+      - No
+      - Yes
+
+    Field: Located on a mural?
+    Type:  select
+    Options:
+      - No
+      - Yes
+
+    Field: Relationship to Graffitied Location
+    Type:  select
+    Options:
+      - Manager
+      - Other
+      - Owner
+      - Resident
+
+    Field: Additional Comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  dropdown (custom)
+    Options:
+      - Alley-Door(s)
+      - Alley-Garage
+      - Alley-Wall(s)
+      - Barricade
+      - Brick Wall
+      - Bridge
+      - Building
+      - Concrete Block Wall
+      - Curb(s)
+      - Door(s)
+      - Driveway
+      - Fence
+      - Fire Hydrant
+      - Garage
+      - Granite Pole(s)
+      - House-Building
+      - Mailbox
+      - Metal Pole(s)
+      - Other
+      - Overpass
+      - Parking Lot
+      - Pedestrian Furniture
+      - Pedestrian Tunnel
+      - Red Curb
+      - Retaining Wall
+      - Roll Down Doors
+      - Sidewalk
+      - Soundwalls
+      - Stairs
+      - Stop Sign(s)
+      - Street(s)
+      - Street Sign(s)
+      - Stucco Wall(s)
+      - Telephone Pole(s)
+      - Traffic Control Box
+      - Traffic Sign(s)
+      - Tree(s)
+      - Underpass
+      - Walkway
+      - Wall(s)
+      - Windows
+
+============================================================
+Category: Homeless Encampment
+Form:     Homeless Encampment
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=nRQGxkKyCVx8sybbLA4RZHDcGFFvO8LqLBSUEHwiZoQLr5NRiEx7AONDbl1l4qPN&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Is the encampment in a brush area? (required)
+    Type:  select
+    Options:
+      - No
+      - Yes
+
+    Field: *Is there an electrical safety concern? (required)
+    Type:  select
+    Options:
+      - No
+      - Yes
+
+    Field: Additional Comments
+    Type:  text
+
+    Field: Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Illegal Activities (Non-Emergency)
+Form:     Illegal Activities (Non-Emergency)
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=ruwq62PO6gHjB2SjrxSkIYktwNV%2Fg9GDrIoqGTdvt%2FkJaLSYlkCCW3HXjwbVIkXf&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Issue (required)
+    Type:  select
+    Options:
+      - Dogs off Leash
+      - Drugs / Alcohol
+      - Illegal Vending
+      - Other
+
+    Field: Additional Comments
+    Type:  text
+
+    Field: Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Illegal Activities (Non-Emergency)
+Form:     Park Amenity and Facilities Repair
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=OW1aYaGtPeSB6klnFYx6XlLTsmkbkWEo%2FP3BzV0acXJrwnR60LVx9P0k5YC3bTRT&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Facility or Amenity Type (required)
+    Type:  select
+    Options:
+      - Adult Fitness Equipment
+      - Baseball/Softball Fields
+      - Basketball Courts
+      - Children's Playgrounds
+      - Drinking Fountains
+      - Golf Courses
+      - Other
+      - Recreation Centers/Buildings
+      - Restrooms
+      - Skate Parks
+      - Sprinklers
+      - Swimming Pools
+      - Tennis Courts
+
+    Field: Please provide any additional comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Illegal Activities (Non-Emergency)
+Form:     Park Cleanliness, Trash and Ground Maintenance
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=%2FX0CUk0n8%2BQx3weh%2FoI%2F6cB41GR54JXRdgYoMNBG2%2FBQDXwSkby823LLVTsVTpnF&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the Issue Type (required)
+    Type:  select
+    Options:
+      - Debris
+      - Excessive Litter / Overflowing Trash Cans
+      - Gopher Holes
+      - Other
+
+    Field: Additional Comments
+    Type:  text
+
+    Field: Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Illegal Activities (Non-Emergency)
+Form:     Trees or Pests in the Park
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=g3WrHyfKOBkijvqL5E7szicuc7UNhH9XvVK9rYK9amIFn%2B%2Fzrzte%2FAa56ZtPHz69&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Issue Category (required)
+    Type:  select
+    Options:
+      - Bees
+      - Bugs
+      - Rodents
+      - Trees
+
+    Field: Please provide any additional comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Accessible Parking Zones
+Form:     Accessible Parking Zones
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=vNizn%2B0r2m8fGFDniZ0X3OVN3W8AiXo1mX%2F8B3lucybBA2POIwuhn32IowEWoVGm&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: *Phone Number (required)
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+  -- Step 2 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: *Phone Number (required)
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+============================================================
+Category: Accessible Parking Zones
+Form:     Parking Issues
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=0ZQpyoNyludLED1fVb6Qs4FpFc9MWp9NETdFQxS5SUWFeKVbIwIFyw6IRjFHP%2F7T&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: Select the Issue Type
+    Type:  select
+    Options:
+      - Accessible Loading Zones
+      - Business Parking with Meters
+      - Business Parking Without Meters
+      - Residential Parking
+
+    Field: Please provide any additional comments
+    Type:  text
+
+============================================================
+Category: Building Permit Inspection
+Form:     Building Permit Inspection
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=IozEc%2FQUuI5zYkf8ZwhCCgR7pID1llcoqfw972Mq9ycBCyY6CwfgGmvoHBcjDfZg&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: *Phone Number (required)
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+  -- Step 2 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: *Phone Number (required)
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+============================================================
+Category: Building Permit Inspection
+Form:     Private Property Violation
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=6MHCWDvaxWHzeWISCM5PuNQ9BMlBzrjP34HvdJl4KKZ65NdAxOQG5Ti5nkJIDHpB&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: *Phone Number (required)
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+  -- Step 2 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: *Phone Number (required)
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+============================================================
+Category: Dockless Mobility Enforcement
+Form:     Dockless Mobility Enforcement
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=nSCw3%2BE%2BD06uLbAN3QI%2Bvc6blRgcJLSxPthqP8StGWY2R%2BfSGOr27HApC%2BgERpUI&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Describe the Violation/Infraction/Issue (required)
+    Type:  select
+    Options:
+      - Damaged or unsanitary Vehicle
+      - Low Battery
+      - Other
+      - Parked on Private Property
+      - Sidewalk Riding
+      - Unpermitted Company and/or vehicle
+      - Vehicle improperly parked (laying down, blocking sidewalk or building access, etc.)
+      - Vehicle listed as available, but physically inaccessible
+
+    Field: Please provide required information
+    Type:  text
+
+    Field: Please provide any additional comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Dockless Mobility Enforcement
+Form:     Illegal Auto Repair or Construction, and Leaf Blower Violations
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=sAkBLzhtqXry%2FomUbyCWP24e2EVE9b3FxKGJk%2FOGyoeJy0uxhnjNBbSJWmu5ZAQ1&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the Issue Type (required)
+    Type:  select
+    Options:
+      - Illegal Auto Repair
+      - Illegal Construction
+      - Leaf Blower Violations
+
+    Field: (unlabeled) (required)
+    Type:  text
+
+    Field: Please provide any additional comments
+    Type:  text
+
+============================================================
+Category: Dockless Mobility Enforcement
+Form:     Illegal Sign Removal, News Rack Issues
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=esOgqbOY%2BtiXw7irthA8u%2Fz94Vc2YROhWkfKOBbhF8rmGblbR3bJaG2Rob7SnoFr&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the Issue Type (required)
+    Type:  select
+    Options:
+      - Illegal Sign Removal
+      - News-Rack Violation
+
+    Field: Please provide any additional comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Dockless Mobility Enforcement
+Form:     Obstructions
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=bxBokQbNbr8TDAJXB54FQBbvNubuEoNRCiKuE1j5%2F174X1mGgIO7EP8HAMDTyM9L&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Issue Type (required)
+    Type:  select
+    Options:
+      - Building Material
+      - Dumpster/Construction Bin
+      - Illegal Dumping Enforcement
+      - Illegal Lane Closure
+      - Other
+      - Street Vending
+
+    Field: Please provide any additional comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Dockless Mobility Enforcement
+Form:     Public Street Receptacles
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=RtJO471lBjEvCqwlbAiGZU3xWdcuNzk40U3PqpJAHDQmaWoLmxZ%2BX74cNbr6sUJK&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+============================================================
+Category: Dockless Mobility Enforcement
+Form:     Report Water Wasting
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=ZO8L9g%2Fd8oO%2BrN7dF%2BmmWvCKeWBZymHbXqHNKlfDM%2Fb4K0XoGbeFp460vViBhMPv&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Is this the first time you're reporting this violation? (required)
+    Type:  select
+    Options:
+      - No
+      - Yes
+
+    Field: *Date (required)
+    Type:  text
+
+    Field: *Time (required)
+    Type:  text
+
+    Field: Type to search...
+    Type:  text
+
+    Field: *Nearest Intersection/Cross Street (required)
+    Type:  text
+
+    Field: Additional Comments
+    Type:  text
+
+    Field: Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+    Field: (unlabeled)
+    Type:  dropdown (custom)
+    Options:
+      - 12:00 AM
+      - 12:15 AM
+      - 12:30 AM
+      - 12:45 AM
+      - 1:00 AM
+      - 1:15 AM
+      - 1:30 AM
+      - 1:45 AM
+      - 2:00 AM
+      - 2:15 AM
+      - 2:30 AM
+      - 2:45 AM
+      - 3:00 AM
+      - 3:15 AM
+      - 3:30 AM
+      - 3:45 AM
+      - 4:00 AM
+      - 4:15 AM
+      - 4:30 AM
+      - 4:45 AM
+      - 5:00 AM
+      - 5:15 AM
+      - 5:30 AM
+      - 5:45 AM
+      - 6:00 AM
+      - 6:15 AM
+      - 6:30 AM
+      - 6:45 AM
+      - 7:00 AM
+      - 7:15 AM
+      - 7:30 AM
+      - 7:45 AM
+      - 8:00 AM
+      - 8:15 AM
+      - 8:30 AM
+      - 8:45 AM
+      - 9:00 AM
+      - 9:15 AM
+      - 9:30 AM
+      - 9:45 AM
+      - 10:00 AM
+      - 10:15 AM
+      - 10:30 AM
+      - 10:45 AM
+      - 11:00 AM
+      - 11:15 AM
+      - 11:30 AM
+      - 11:45 AM
+      - 12:00 PM
+      - 12:15 PM
+      - 12:30 PM
+      - 12:45 PM
+      - 1:00 PM
+      - 1:15 PM
+      - 1:30 PM
+      - 1:45 PM
+      - 2:00 PM
+      - 2:15 PM
+      - 2:30 PM
+      - 2:45 PM
+      - 3:00 PM
+      - 3:15 PM
+      - 3:30 PM
+      - 3:45 PM
+      - 4:00 PM
+      - 4:15 PM
+      - 4:30 PM
+      - 4:45 PM
+      - 5:00 PM
+      - 5:15 PM
+      - 5:30 PM
+      - 5:45 PM
+      - 6:00 PM
+      - 6:15 PM
+      - 6:30 PM
+      - 6:45 PM
+      - 7:00 PM
+      - 7:15 PM
+      - 7:30 PM
+      - 7:45 PM
+      - 8:00 PM
+      - 8:15 PM
+      - 8:30 PM
+      - 8:45 PM
+      - 9:00 PM
+      - 9:15 PM
+      - 9:30 PM
+      - 9:45 PM
+      - 10:00 PM
+      - 10:15 PM
+      - 10:30 PM
+      - 10:45 PM
+      - 11:00 PM
+      - 11:15 PM
+      - 11:30 PM
+      - 11:45 PM
+      - Leak/Broken Sprinkler
+      - Other Waste Water
+      - Run-off
+      - Wash-Down of Hardscapes
+      - Watering Too Long
+      - Wrong Day
+      - Wrong Time
+
+============================================================
+Category: Containers
+Form:     Containers
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=v%2FAtkqxaWRgu5qOnw4DvtHSWSNuL6VUxYik%2F%2FeTs8ck1%2B1KfbRewP%2BPmQ7YnUUlb&c__IsPortalUser=true
+Note:     requires login or could not be accessed
+============================================================
+
+============================================================
+Category: Containers
+Form:     Illegal Dumping Food Waste
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=O%2FVWTzgEgKYpb7dpWUidt%2Bjb4MhWirB34dT5M%2F5yKHAd%2BjRepNhPgxMC%2FPnYncw4&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: (unlabeled)
+    Type:  text
+
+    Field: *Location (required)
+    Type:  select
+    Options:
+      - Alley
+      - Center Median
+      - Cul De Sac
+      - Curb
+      - Dead End
+      - Easement/Pedestrian Walk
+      - Gated Alley
+      - On Bridge
+      - Side Street
+      - Sidewalk
+      - Stairway
+      - Stairway/Pedestrian Tunnel
+      - Street
+      - Under Bridge
+      - Under Freeway
+
+    Field: Additional Comments
+    Type:  text
+
+    Field: Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Containers
+Form:     Illegal Dumping Item Pickup
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=21FEPy1oY%2FYbR3An%2Fm1HEW81YnMZx1%2BBCTBIWKbJXnvl7s%2FatJ8ipGVyZSvXnRGy&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+============================================================
+Category: Containers
+Form:     Item Pickups
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=YpUxU%2FHRueXjn3am0qpDj%2BhVUKZCg9OJpAK4JOIKCdg3XvhZIPPfjN64oxjE6VpB&c__IsPortalUser=true
+Note:     requires login or could not be accessed
+============================================================
+
+============================================================
+Category: Containers
+Form:     recycLA Billing Inquiry
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=PILdUnhHCG6VIpCf6mfxnE0A7scNlPPOhe6XRDO%2F7klk0dxzqKj0vqKG5NLZ8vFZ&c__IsPortalUser=true
+Note:     requires login or could not be accessed
+============================================================
+
+============================================================
+Category: Containers
+Form:     recycLA Complaint
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=lDUudlIDeb%2BQfMP1EJlk6%2FkV%2F4ib0%2BnULbw7z0mUMqMrWdpIuWISTk3ofxYk%2BmEO&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+============================================================
+Category: Containers
+Form:     recycLA Program Compliance
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=vy7jb3%2Fx9MPCmjV6F1M3Gc6YDTGI1umPHrPu7FtQpXofJ7SK2vA3VHCRk1kUBPwq&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+============================================================
+Category: Containers
+Form:     recycLA Waste Assessment
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=CbJhW4LDyl52gO1w4iq8MHvknRVQwQq%2FKzyKcIHVAEeRBSE05Zm2nBJLGVYGlUrZ&c__IsPortalUser=true
+Note:     requires login or could not be accessed
+============================================================
+
+============================================================
+Category: Containers
+Form:     Service Not Complete
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=lDRw1FDX4rcffag5Xirst%2BUeDW2DPsaLT79FXuUOIFoJNfNBCGvY4k4j%2BLkgCgYh&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the SNC type: (required)
+    Type:  select
+    Options:
+      - Illegal Dumping
+      - Missed Collections
+
+============================================================
+Category: Accessible Bus Stop Issues
+Form:     Accessible Bus Stop Issues
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=6FytiaKis32KNErL3b41UvdKT4VLCkoUqXW4hHnnK4V764GRhe7wYqdWCpfDqqLN&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Accessible Bus Stop Issues (required)
+    Type:  select
+    Options:
+      - Bus Loading/Unloading Area Blocked by Tree
+      - Need Loading Area for Access Services
+      - Passenger Required to Unload into Roadway
+      - Path to Bus Stop Blocked by Items on Sidewalk
+      - Stopped Buses Block Crosswalk
+
+    Field: Additional Comments
+    Type:  text
+
+============================================================
+Category: Accessible Bus Stop Issues
+Form:     Barricade Removal
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=n%2B6TmeOmI4e5hqmGX3RJF6h1lGH05kjL4mQImc74mJBHP7n3tFVUqmSxYhAHwvjF&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the location of the Barricade Removal (required)
+    Type:  select
+    Options:
+      - Alley
+      - Sidewalk
+      - Street
+
+    Field: Additional Comments
+    Type:  text
+
+    Field: Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Accessible Bus Stop Issues
+Form:     Street Sweeping
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=7pQZqNRwvbgZ0FfvrF%2FAanEIG%2FUWrxmUtGTjscMfMt3ooQUsVfHIclVj%2FtIilYMv&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the location of the Street Sweeping (required)
+    Type:  select
+    Options:
+      - Non-posted street
+      - Posted No Parking Route
+
+    Field: Additional Comments
+    Type:  text
+
+============================================================
+Category: Accessible Bus Stop Issues
+Form:     Bicycle Facilities Issues
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=c6ieRC67%2FEDKAIYh6yYbRMGCvl1iuCIQj0l0QOi%2FrFWOjSAtkDvPsIUmWA5xG6ks&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the Issue Type (required)
+    Type:  select
+    Options:
+      - Bicycle Sign
+      - Bike Path Lighting
+      - Bike Roadway Markings
+      - Damaged/Broken Bike Rack
+
+    Field: Additional Comments
+    Type:  text
+
+    Field: Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Accessible Bus Stop Issues
+Form:     Bus Stop Furniture
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=YsH48Ng5f0acB%2Blm4AU5IBTXyp9P1DUxmijFvEz0oH0RSyL8tImyaZavSI3k0Sij&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *What are you requesting? (required)
+    Type:  select
+    Options:
+      - Bus Stop Furniture Servicing
+
+    Field: Please provide any additional comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Accessible Bus Stop Issues
+Form:     Bus Stop Parking Sign & Markings
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=DT8qQIZAC1W6JfvWMTiDlwuFaRXUItzlS7%2F1n7q2tu22efgKcb2Ucl4ZAmiSqM9%2B&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the Issue Type (required)
+    Type:  select
+    Options:
+      - Bus Stop Sign
+      - Curb Zone Faded / Missing
+      - Other
+      - Roadway Markings
+
+    Field: Additional Comments
+    Type:  text
+
+    Field: Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Accessible Bus Stop Issues
+Form:     Curb Issues
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=7sIo%2BnQLlY6n7mlN%2Bck3OmFbMWDCBQRiqWj9Of0YAx7UcGbmFcJ5YZDwQjTiECqi&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the Curb Issue Type (required)
+    Type:  select
+    Options:
+      - Curb Zones - Repainting
+
+    Field: Please provide any additional comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Accessible Bus Stop Issues
+Form:     Flooding
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=Nr6wA%2FrBVkqzapnj2EgwMmzfIg7l8WPp1u9DC0m1Tc8l0%2BadzY1aHR9%2BgHtUSXxu&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the location of the Flooding (required)
+    Type:  select
+    Options:
+      - Alley
+      - Street
+
+    Field: Please provide any additional comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Accessible Bus Stop Issues
+Form:     General Street Inspection
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=hynrREmjrhMyfZys9UJUj3lh99xsKrD9MDom%2BcET7dd2xxuFGaywrErH0TdNeNbF&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the Issue Type (required)
+    Type:  select
+    Options:
+      - Oil Spills
+      - Other
+
+    Field: Please provide any additional comments (required)
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Accessible Bus Stop Issues
+Form:     Guard/Warning Rail Maintenance
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=vzSnGetcwerk8NekbiPV5qVNY95e75bGwYtfBKVQTqJeAn2EKDSGB3%2BshTDEpQM7&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *What are you requesting? (required)
+    Type:  select
+    Options:
+      - Repair
+      - Replace
+
+    Field: Additional Comments
+    Type:  text
+
+    Field: Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Accessible Bus Stop Issues
+Form:     Illegal Discharge of Water
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=%2F2adh8bRYkLNeMKHesE8Deb%2FA1PegQHGrPaTfUU9NsjWx7%2BKpLiHA1X4ypCuQJtr&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the location of the Illegal Discharge of Water (required)
+    Type:  select
+    Options:
+      - Alley
+      - Sidewalk
+      - Street
+
+    Field: Additional Comments
+    Type:  text
+
+    Field: Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Accessible Bus Stop Issues
+Form:     Median Island Maintenance
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=9ibg83mwItxJpn1clw854%2By5Ld35hXT2rjL77yr%2FWHd3NHZiWrRhrX%2F6Q36A6Stm&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the median island type (required)
+    Type:  select
+    Options:
+      - Improved (irrigation, plants)
+      - Unimproved
+
+    Field: Please provide any additional comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Accessible Bus Stop Issues
+Form:     Parking Meter Maintenance
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=sWd4KamwDiBK1u6lhU3p4TQ9kGR%2BIMUWH47hgPyjH7ZauE3VtTdxJ8XXQ0c2dmtM&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: Can you provide a meter number located on the body of the parking meter?
+    Type:  select
+    Options:
+      - No
+      - Yes
+
+    Field: *Select the Issue Type (required)
+    Type:  select
+    Options:
+      - Damaged Meter Post
+      - Meter Head Repair
+      - Vandalism
+
+    Field: Additional Comments
+    Type:  text
+
+    Field: Is this a request about a disability access barrier that is made by or on behalf of a person with a disability?
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Accessible Bus Stop Issues
+Form:     Report a Sidewalk Problem
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=QeUsSaM0ral9geo%2BEWXuK7jAJ%2B7ydMeRmUq5G9K2viLPPo9XEYTxUak5i9Hg18x7&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+============================================================
+Category: Accessible Bus Stop Issues
+Form:     Street Pavement Issues
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=qY%2Fy4LIhKrMmE4t7SNca6nz5rwmf3HZh9fvLGZkUi5QvXWNihZClgkLyTG2NVSpH&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the Issue Type (required)
+    Type:  select
+    Options:
+      - Pavement Marking Maintenance
+      - Pothole - Small Asphalt Repair
+
+    Field: Please provide any additional comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Accessible Bus Stop Issues
+Form:     Streetlight Repair Services
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=XYCFaVarVDFhoIJpHZhDZzZK8G4RzSH8zd1%2BMuQXT3XxvfLN9YVyRGq%2BxVS%2FcKQ7&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the streetlight repair service (required)
+    Type:  select
+    Options:
+      - Streetlight(s) Repair
+      - Streetlight-Attached EV Charger Repair
+      - Telecom Attachment Repair
+      - STAP (Sidewalk and Transit Amenities Program) Maintenance
+
+    Field: *Is the equipment on/operational? (required)
+    Type:  select
+    Options:
+      - No
+      - Yes
+
+    Field: Please provide required information (required)
+    Type:  text
+
+============================================================
+Category: Accessible Bus Stop Issues
+Form:     Streetlight Non-Repair Services
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=ZwQ5cjcPsbQZ58UU3fQcMJaTxECkBnqU2Twgl1dyAxYpgxuZv%2BqOeK4KdraJeH3R&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *What streetlight-related service would you like to report? (required)
+    Type:  select
+    Options:
+      - Community Decorative or Festive Lighting
+      - Glare Shield Installation
+      - Outdoor Area Lighting
+
+    Field: *Additional Comments (required)
+    Type:  text
+
+============================================================
+Category: Accessible Bus Stop Issues
+Form:     Streetlight ADA Repair Services
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=RsJwuvjOyyzCwJibeIzagzySvWMie6RsHSzjTvtyH1WHir472qK%2Buj4G%2FbbPHwqa&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: Phone Number
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+  -- Step 2 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: Phone Number
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+============================================================
+Category: Accessible Bus Stop Issues
+Form:     Traffic Sign Issues
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=nfu8Hcz87zzYNV0fu%2BZNoqHZZD7jLEgE8Ud1AUyi1wRwMv%2BRjd1LTnNZK7Q6FfUw&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Is it an emergency sign maintenance issue? (required)
+    Type:  select
+    Options:
+      - No
+      - Yes
+
+    Field: Please provide any additional comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Accessible Bus Stop Issues
+Form:     Traffic Signal Issues
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=bjdKW6qeuI4a5idJMvDfQPsQSxkN6UDPJtZkgbcWKD4%2B%2BpCXUR3ZtnSLYnfO0ueB&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: Is the Traffic Signal issue an emergency?
+    Type:  select
+    Options:
+      - No
+      - Yes
+
+    Field: (unlabeled) (required)
+    Type:  text
+
+    Field: Please provide any additional comments
+    Type:  text
+
+============================================================
+Category: Traffic Safety
+Form:     Traffic Safety
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=j7R34m0sP0ujbST3lVx%2BlAoGj4mtXfTBD2S1UrM%2FRTAky%2FIndOW7ppaRu6uANhO7&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the Safety Concern (required)
+    Type:  select
+    Options:
+      - Bicycle Safety
+      - Bus Stop Safety
+      - Equestrian Safety
+      - Neighborhood Safety
+      - Pedestrian Accessibility Issues
+      - Pedestrian Safety
+      - School Safety
+      - Vehicle Safety
+
+    Field: Please provide any additional comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Watershed Protection Division (WPD) Enforcement
+Form:     Watershed Protection Division (WPD) Enforcement
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=LmWhardYd4Gt5viAECZlWGaIyQMfbvLSWPm8folQx1h6Vw26dBajsXxrbrOh9cUz&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Issue Type (required)
+    Type:  select
+    Options:
+      - Abandoned Hazardous Waste
+      - Storm Water
+
+    Field: Please provide any additional comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  dropdown (custom)
+    Options:
+      - Biohazard (Feces, Syringes)
+      - Chemicals
+      - Corrosive
+      - Explosive
+      - Flammable
+      - Unknown
+
+============================================================
+Category: Feedback
+Form:     Feedback
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=gmog05DTbXN4SI3xW5rSpwbzb9nSv2zSNBp7wFQjiIg96ELj%2BMKl72Bsl25hx%2BjP&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: Phone Number
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+  -- Step 2 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: Phone Number
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+============================================================
+Category: Feedback
+Form:     Land/Mud Slide
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=HwbafHAlx2F9xNJEmgUNRRpZcKdGBHn5xYNamFqjUmKg0IKGrlg6AXQpapuuYDos&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *Request Anonymously (required)
+    Type:  select
+    Options:
+      - Yes
+      - No
+
+  -- Step 2 --
+
+    Field: *Select the location of the Land/Mud Slide (required)
+    Type:  select
+    Options:
+      - Alley
+      - Other
+      - Sidewalk
+      - Street
+
+    Field: Please provide any additional comments
+    Type:  text
+
+    Field: (unlabeled)
+    Type:  select
+    Options:
+      - Decline to Answer
+      - No
+      - Yes
+
+============================================================
+Category: Feedback
+Form:     Other
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=PzNY4e0evzW0V88PmtrMTXntCzUIrXROHlejjeomYp9XfMoACx66jvI4jOapJEVJ&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: Phone Number
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+  -- Step 2 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: Phone Number
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+============================================================
+Category: Feedback
+Form:     Request for Terminal Access Routes
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=K4SqkTSgzm59M5ShkQ4tCE44HBiLmzbKAgUaRuKzZ0P%2B%2F0Nq1AR%2FTDrkwzVI3rjj&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: *Phone Number (required)
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+  -- Step 2 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: *Phone Number (required)
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+============================================================
+Category: Feedback
+Form:     Searchlight & Generator Permits
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=wbcm%2FO7nMmL%2FZpkk09viCRSUhbcM4bCkyJCpZLfrbYkPT5gVWqbvd%2B7%2BtrILB%2FsL&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: *Phone Number (required)
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+  -- Step 2 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: *Phone Number (required)
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+============================================================
+Category: Feedback
+Form:     Sewer or Sidewalk Rebates
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=Ybwwi8qGnZNbSjsdeoJVes492W8DGgmxYKS6z3%2BIh2qTBwX%2BgXorsJUlI%2BmI4Dev&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: *Phone Number (required)
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+  -- Step 2 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: *Phone Number (required)
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+============================================================
+Category: Feedback
+Form:     Taxi Complaints
+URL:      https://myla311.lacity.gov/s/report-issue?c__IssueTypeId=dd9j2acetGN6S5n%2BXS0EZawmrLa9RJIKHZhk57QhRWmyxsc06WtchsTBg4H6%2FG2X&c__IsPortalUser=true
+============================================================
+
+  -- Step 1 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: *Phone Number (required)
+    Type:  tel
+
+    Field: Extension
+    Type:  text
+
+  -- Step 2 --
+
+    Field: *First Name (required)
+    Type:  text
+
+    Field: *Last Name (required)
+    Type:  text
+
+    Field: *Email (required)
+    Type:  text
+
+    Field: *Phone Number (required)
+    Type:  tel
+
+    Field: Extension
+    Type:  text

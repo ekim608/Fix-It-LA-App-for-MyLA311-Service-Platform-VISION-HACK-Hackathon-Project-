@@ -1,15 +1,46 @@
 // LA 311 (MyLA311) service catalog.
 //
-// `code` values follow the Open311 GeoReport v2 service_code convention used by
-// the City of Los Angeles. They are centralized here so they can be verified /
-// updated against the live service-discovery endpoint (GET /services.json)
-// without touching UI or API code.
+// The real catalog is scraped from https://myla311.lacity.gov/s/ into
+// lib/myla311-catalog.json (regenerate with `node scripts/build-catalog.mjs`).
+// Each entry carries the live report-issue URL, the Salesforce IssueTypeId, and
+// the exact multi-step field definitions — everything the Playwright submission
+// backend needs to fill and file a real request.
+//
+// This module derives the UI-friendly `Service[]` (used by the review form and
+// the AI classifier) from that raw catalog, so there is a single source of
+// truth. `getCatalogForm(code)` returns the raw form (URL + steps) for the
+// submitter.
+
+import rawCatalog from './myla311-catalog.json'
+
+export type CatalogField = {
+  label: string
+  /** 'select' | 'text' | 'textarea' | 'tel' | 'date' | 'dropdown (custom)' | 'checkbox' | 'location' | 'number' */
+  type: string
+  required: boolean
+  options: string[]
+}
+
+export type CatalogStep = {
+  step: string
+  fields: CatalogField[]
+}
+
+export type CatalogForm = {
+  category: string
+  form: string
+  url: string
+  issueTypeId: string
+  steps: CatalogStep[]
+  note?: string
+}
+
+export const CATALOG = rawCatalog as CatalogForm[]
 
 export type ServiceField = {
   key: string
+  /** the exact on-page field label, used to locate the input during submission */
   label: string
-  /** open311 attribute code, if this maps to a service-definition attribute */
-  attributeCode?: string
   type: 'text' | 'textarea' | 'number' | 'select'
   placeholder?: string
   options?: string[]
@@ -19,7 +50,7 @@ export type ServiceField = {
 export type Service = {
   code: string
   name: string
-  /** Short line shown under the name. */
+  /** Short line shown under the name (the MyLA311 category). */
   summary: string
   /** Longer guidance used by the AI classifier to match intent. */
   guidance: string
@@ -29,134 +60,173 @@ export type Service = {
   fields?: ServiceField[]
 }
 
-export const SERVICES: Service[] = [
-  {
-    code: 'BULKYITEM',
-    name: 'Bulky Item Pickup',
-    summary: 'Couches, mattresses, furniture and large household items',
-    guidance:
-      'Free pickup of oversized household items left at the curb such as sofas, mattresses, tables, chairs, carpet rolls and box springs.',
-    icon: 'Sofa',
-    keywords: ['couch', 'sofa', 'mattress', 'furniture', 'table', 'chair', 'bulky', 'box spring', 'carpet'],
-    fields: [
-      { key: 'itemCount', label: 'Number of items', type: 'number', placeholder: 'e.g. 2' },
-      { key: 'itemDescription', label: 'What items?', type: 'text', placeholder: 'e.g. one couch, one mattress' },
-    ],
-  },
-  {
-    code: 'ILLEGALDUMPINGPICKUP',
-    name: 'Illegal Dumping',
-    summary: 'Trash, debris or waste dumped in public spaces',
-    guidance:
-      'Removal of trash, construction debris, tires, or other waste illegally dumped on sidewalks, alleys, parkways or vacant lots.',
-    icon: 'Trash2',
-    keywords: ['dumping', 'trash pile', 'debris', 'garbage', 'waste', 'tires', 'dumped', 'litter', 'alley'],
-    fields: [
-      { key: 'itemDescription', label: 'What was dumped?', type: 'text', placeholder: 'e.g. bags of trash, construction debris' },
-    ],
-  },
-  {
-    code: 'METALHOUSEHOLDAPPLIANCES',
-    name: 'Metal & Household Appliances',
-    summary: 'Refrigerators, stoves, washers and other appliances',
-    guidance:
-      'Pickup of large metal items and appliances such as refrigerators, stoves, washing machines, dryers and water heaters.',
-    icon: 'WashingMachine',
-    keywords: ['refrigerator', 'fridge', 'stove', 'washer', 'dryer', 'appliance', 'metal', 'water heater', 'oven'],
-    fields: [
-      { key: 'itemDescription', label: 'Which appliance(s)?', type: 'text', placeholder: 'e.g. refrigerator' },
-    ],
-  },
-  {
-    code: 'ELECTRONICWASTE',
-    name: 'Electronic Waste',
-    summary: 'TVs, computers, monitors and other electronics',
-    guidance:
-      'Pickup of electronic waste such as televisions, computers, monitors, printers and other electronics.',
-    icon: 'Tv',
-    keywords: ['tv', 'television', 'computer', 'monitor', 'printer', 'electronic', 'e-waste', 'laptop'],
-    fields: [
-      { key: 'itemDescription', label: 'Which electronics?', type: 'text', placeholder: 'e.g. old TV and a monitor' },
-    ],
-  },
-  {
-    code: 'GRAFFITIREMOVAL',
-    name: 'Graffiti Removal',
-    summary: 'Graffiti or tagging on walls, signs or property',
-    guidance:
-      'Removal of graffiti and tagging from walls, fences, poles, signs, sidewalks and other public or visible surfaces.',
-    icon: 'SprayCan',
-    keywords: ['graffiti', 'tagging', 'tag', 'spray paint', 'vandalism', 'defaced'],
-    fields: [
-      {
-        key: 'surface',
-        label: 'Surface type',
-        type: 'select',
-        options: ['Wall', 'Fence', 'Sidewalk', 'Pole / sign', 'Other'],
-      },
-    ],
-  },
-  {
-    code: 'POTHOLE',
-    name: 'Pothole / Street Damage',
-    summary: 'Potholes and damaged road surfaces',
-    guidance:
-      'Repair of potholes, cracked or damaged street surfaces and sunken pavement on public roadways.',
-    icon: 'Construction',
-    keywords: ['pothole', 'road', 'street damage', 'pavement', 'crack', 'sinkhole', 'asphalt'],
-    fields: [
-      { key: 'laneLocation', label: 'Where on the road?', type: 'text', placeholder: 'e.g. right lane near the crosswalk' },
-    ],
-  },
-  {
-    code: 'SINGLESTREETLIGHT',
-    name: 'Streetlight Out',
-    summary: 'A single streetlight that is out or damaged',
-    guidance:
-      'Report a single streetlight that is not working, flickering, staying on during the day, or physically damaged.',
-    icon: 'Lightbulb',
-    keywords: ['streetlight', 'street light', 'light out', 'lamp post', 'flickering', 'dark street'],
-    fields: [
-      { key: 'poleId', label: 'Pole number (if visible)', type: 'text', placeholder: 'Optional' },
-    ],
-  },
-  {
-    code: 'DEADANIMALREMOVAL',
-    name: 'Dead Animal Removal',
-    summary: 'Dead animal in the street or public area',
-    guidance:
-      'Removal of a dead animal from a street, sidewalk, alley or other public area.',
-    icon: 'PawPrint',
-    keywords: ['dead animal', 'dead dog', 'dead cat', 'carcass', 'roadkill', 'animal remains'],
-    fields: [
-      { key: 'animalType', label: 'Type of animal', type: 'text', placeholder: 'e.g. dog, cat, raccoon' },
-    ],
-  },
-  {
-    code: 'HOMELESSENCAMPMENT',
-    name: 'Homeless Encampment',
-    summary: 'Report an encampment for outreach and cleanup',
-    guidance:
-      'Report a homeless encampment so the city can coordinate outreach services and cleanup. This connects people with resources.',
-    icon: 'Tent',
-    keywords: ['encampment', 'homeless', 'tents', 'unhoused', 'camp'],
-    fields: [
-      { key: 'sizeEstimate', label: 'Approx. number of tents / people', type: 'text', placeholder: 'Optional' },
-    ],
-  },
-  {
-    code: 'OTHER',
-    name: 'Something Else',
-    summary: "Report another issue — we'll route it for you",
-    guidance:
-      'A general or uncategorized request. Use when the issue does not clearly match another service type.',
-    icon: 'CircleHelp',
-    keywords: ['other', 'general', 'help', 'question', 'misc'],
-  },
-]
+const CATEGORY_ICON: Record<string, string> = {
+  'Animal Complaint/Violation': 'PawPrint',
+  'Bees or Beehive': 'Bug',
+  'ADA/Accessibility/Disability Complaints': 'Accessibility',
+  'Graffiti Removal': 'SprayCan',
+  'Homeless Encampment': 'Tent',
+  'Illegal Activities (Non-Emergency)': 'TriangleAlert',
+  'Accessible Parking Zones': 'CircleParking',
+  'Building Permit Inspection': 'HardHat',
+  'Dockless Mobility Enforcement': 'Bike',
+  Containers: 'Container',
+  'Accessible Bus Stop Issues': 'BusFront',
+  'Traffic Safety': 'TrafficCone',
+  'Watershed Protection Division (WPD) Enforcement': 'Droplets',
+  Feedback: 'MessageSquare',
+}
+
+// Field labels that are handled elsewhere (reporter identity, anonymity toggle,
+// the free-text description, the location picker, or boilerplate) and so should
+// not appear as extra inputs on the review form.
+const IDENTITY_LABELS = new Set([
+  'first name',
+  'last name',
+  'email',
+  'phone number',
+  'extension',
+])
+
+function isHandledElsewhere(label: string): boolean {
+  const l = label.toLowerCase().trim()
+  if (l === '(unlabeled)' || l === '') return true
+  if (IDENTITY_LABELS.has(l)) return true
+  if (l.includes('anonymously')) return true
+  if (l.includes('disability access barrier')) return true
+  if (l.includes('additional comments')) return true
+  if (l.includes('any additional comments')) return true
+  if (l.includes('type to search')) return true
+  return false
+}
+
+function slugKey(label: string): string {
+  return (
+    label
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '_')
+      .replace(/^_+|_+$/g, '')
+      .slice(0, 40) || 'field'
+  )
+}
+
+function codeFor(form: CatalogForm): string {
+  const base = `${form.category} ${form.form}`
+    .toUpperCase()
+    .replace(/[^A-Z0-9]+/g, '')
+    .slice(0, 40)
+  return base || 'FORM'
+}
+
+function toServiceFieldType(f: CatalogField): ServiceField['type'] {
+  if (f.options.length > 0) return 'select'
+  if (f.type === 'textarea') return 'textarea'
+  if (f.type === 'number') return 'number'
+  return 'text'
+}
+
+function buildKeywords(form: CatalogForm): string[] {
+  const tokens = new Set<string>()
+  const add = (s: string) => {
+    for (const w of s.toLowerCase().split(/[^a-z0-9]+/)) {
+      if (w.length > 2) tokens.add(w)
+    }
+  }
+  add(form.category)
+  add(form.form)
+  for (const step of form.steps) {
+    for (const field of step.fields) {
+      if (field.options.length && field.options.length <= 8) {
+        for (const opt of field.options) add(opt)
+      }
+    }
+  }
+  return [...tokens]
+}
+
+function primaryOptions(form: CatalogForm): string[] {
+  for (const step of form.steps) {
+    for (const field of step.fields) {
+      if (isHandledElsewhere(field.label)) continue
+      if (field.options.length > 1) return field.options
+    }
+  }
+  return []
+}
+
+function buildFields(form: CatalogForm): ServiceField[] {
+  const fields: ServiceField[] = []
+  const seen = new Set<string>()
+  for (const step of form.steps) {
+    for (const f of step.fields) {
+      if (isHandledElsewhere(f.label)) continue
+      let key = slugKey(f.label)
+      while (seen.has(key)) key = `${key}_2`
+      seen.add(key)
+      fields.push({
+        key,
+        label: f.label,
+        type: toServiceFieldType(f),
+        options: f.options.length ? f.options : undefined,
+        required: f.required,
+      })
+    }
+  }
+  return fields
+}
+
+// Map every real catalog form to a UI/classifier Service, keeping the raw form
+// reachable by code for the submission backend.
+const catalogByCode = new Map<string, CatalogForm>()
+
+const derived: Service[] = (() => {
+  const used = new Set<string>()
+  const list: Service[] = []
+  for (const form of CATALOG) {
+    let code = codeFor(form)
+    while (used.has(code)) code = `${code}2`
+    used.add(code)
+    catalogByCode.set(code, form)
+
+    const opts = primaryOptions(form)
+    const name = form.form === form.category ? form.form : form.form
+    const guidance =
+      `${form.category}. Report type: ${form.form}.` +
+      (opts.length ? ` Covers: ${opts.join(', ')}.` : '')
+
+    list.push({
+      code,
+      name,
+      summary: form.category,
+      guidance,
+      icon: CATEGORY_ICON[form.category] ?? 'CircleHelp',
+      keywords: buildKeywords(form),
+      fields: buildFields(form),
+    })
+  }
+  return list
+})()
+
+const OTHER: Service = {
+  code: 'OTHER',
+  name: 'Something Else',
+  summary: 'Another issue — we will route it for you',
+  guidance:
+    'A general or uncategorized request. Use when the issue does not clearly match any other service type in the catalog.',
+  icon: 'CircleHelp',
+  keywords: ['other', 'general', 'help', 'question', 'misc'],
+}
+
+export const SERVICES: Service[] = [...derived, OTHER]
 
 export function getService(code: string): Service | undefined {
   return SERVICES.find((s) => s.code === code)
+}
+
+/** The raw MyLA311 form (live URL + step/field definitions) for a service code,
+ *  used by the Playwright submission backend. `OTHER` has no real form. */
+export function getCatalogForm(code: string): CatalogForm | undefined {
+  return catalogByCode.get(code)
 }
 
 export const SERVICE_CODES = SERVICES.map((s) => s.code)
