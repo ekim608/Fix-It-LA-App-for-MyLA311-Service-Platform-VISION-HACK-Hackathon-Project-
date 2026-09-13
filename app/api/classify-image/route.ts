@@ -1,13 +1,16 @@
 import { generateObject } from 'ai'
+import { google } from '@ai-sdk/google'
 import { z } from 'zod'
 import { SERVICES, SERVICE_CODES, getService } from '@/lib/services'
 
 export const maxDuration = 30
 
 // Vision model used to look at the captured photo and pick the right 311
-// service. Claude Haiku is a fast, cost-effective multimodal model that keeps
-// the capture-to-review step snappy.
-const VISION_MODEL = 'anthropic/claude-haiku-4.5'
+// service. We call Google Gemini directly (via @ai-sdk/google, which reads the
+// free GOOGLE_GENERATIVE_AI_API_KEY) so image analysis runs on Google's free
+// tier instead of the paid AI Gateway. Gemini Flash is fast and multimodal,
+// keeping the capture-to-review step snappy.
+const VISION_MODEL = google('gemini-2.5-flash')
 
 type ClassifyImageBody = {
   imageDataUrl?: string
