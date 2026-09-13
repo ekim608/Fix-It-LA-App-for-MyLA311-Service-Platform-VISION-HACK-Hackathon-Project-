@@ -1,7 +1,5 @@
 # Fix It LA App
 
-This is a prototype for an app called "Fix it LA", built during the Vision Hack Hackathon in South Los Angeles. It helps automate and streamline the process of finding, filling out, and submitting forms on MyLA311, the City of Los Angeles’ 311 call center and online platform that connects residents, businesses, and visitors to city services and information quickly and easily. Using Gemini vision
+This is a prototype for an app called "Fix it LA", built for the "Vision Hack" Hackathon in South Los Angeles. It automates and streamlines the process of finding, filling out, and submitting forms on MyLA311, the City of Los Angeles' online platform that allows citizens to report issues and submit city service requests. Using the Web Speech API and a Google Gemini vision model, users can type, verbally describe, or take a picture of an issue that needs to be serviced. The descriptions and/or pictures are then analyzed and the appropriate service request form is filled out with all the necessary information.
 
-Try it now using this link! (For optimal experience, mobile device or tablet preferred): 
-
-## Built with v0
+Try it now using this link! (For optimal experience, mobile device or tablet is preferred): 
