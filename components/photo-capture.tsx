@@ -242,7 +242,7 @@ export function PhotoCapture({
         Point at the issue, add a note by typing or speaking, then send.
       </p>
 
-      {/* Bottom text-entry bar with speak option */}
+      {/* Bottom controls: shutter + text-entry bar with speak option */}
       <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-8">
         {listening && (
           <p
@@ -253,6 +253,21 @@ export function PhotoCapture({
             Listening…
           </p>
         )}
+
+        {/* Primary shutter button: capture the photo and auto-detect the form */}
+        <div className="mb-5 flex justify-center">
+          <button
+            type="button"
+            onClick={handleSend}
+            aria-label="Take a picture"
+            className="flex size-[72px] items-center justify-center rounded-full bg-white/25 ring-4 ring-white/70 backdrop-blur transition-transform active:scale-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white"
+          >
+            <span className="flex size-14 items-center justify-center rounded-full bg-white text-neutral-900">
+              <Camera className="size-6" aria-hidden="true" />
+            </span>
+          </button>
+        </div>
+
         <div className="mx-auto flex w-full max-w-md items-center gap-2 rounded-full bg-black/50 p-1.5 pl-2 backdrop-blur">
           <button
             type="button"
