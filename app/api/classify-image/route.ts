@@ -1,12 +1,16 @@
 import { generateObject } from 'ai'
+import { google } from '@ai-sdk/google'
 import { z } from 'zod'
 import { SERVICES, SERVICE_CODES, getService } from '@/lib/services'
 
 export const maxDuration = 30
 
 // Vision model used to look at the captured photo and pick the right 311
-// service. A fast multimodal model keeps the capture-to-review step snappy.
-const VISION_MODEL = 'openai/gpt-4.1-mini'
+// service. We call Google Gemini directly (via @ai-sdk/google, which reads the
+// free GOOGLE_GENERATIVE_AI_API_KEY) so image analysis runs on Google's free
+// tier instead of the paid AI Gateway. Gemini Flash is fast and multimodal,
+// keeping the capture-to-review step snappy.
+const VISION_MODEL = google('gemini-3.6-flash')
 
 type ClassifyImageBody = {
   imageDataUrl?: string
