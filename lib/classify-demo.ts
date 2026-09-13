@@ -49,16 +49,15 @@ export function classifyDemoPhoto(note?: string): DemoClassification {
   const trimmed = note?.trim()
 
   if (!trimmed) {
-    const service = getService('POTHOLE')!
+    // Image-only path with no vision result available (e.g. the AI Gateway
+    // vision call couldn't run). Fall back to the scripted pothole report so
+    // the flow always demos end to end.
+    const base = classifyDemo(SCRIPTED_PHOTO_NOTE)
     return {
-      serviceCode: service.code,
-      title: service.name,
-      description:
-        'Large pothole in the roadway creating a hazard for passing vehicles.',
-      confidence: 0.94,
+      ...base,
+      description: cleanDescription(SCRIPTED_PHOTO_NOTE),
       // The location comes from the device's real GPS, resolved by the flow.
       extractedLocation: null,
-      attributes: { laneLocation: 'Right lane near the crosswalk' },
       lat: null,
       lng: null,
     }
